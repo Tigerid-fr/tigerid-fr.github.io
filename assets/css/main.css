@@ -4239,3 +4239,27 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.btn-cv-download {
+  background: var(--accent-color, #007bff); /* Utilise la couleur du site */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 2px solid var(--accent-color, #007bff);
+}
+
+.btn-cv-download:hover {
+  background: transparent;
+  color: var(--accent-color, #007bff);
+  transform: translateY(-2px);
+}
+
+.btn-cv-download i {
+  font-size: 1.2rem;
+}
