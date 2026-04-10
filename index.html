@@ -4,12 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Eliott Panier</title>
+  <title>Portfolio Eliott Panier - R&T</title>
+  <meta name="description" content="Portfolio d'Eliott Panier, étudiant en BUT Réseaux et Télécommunications.">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -17,16 +27,19 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename" style="color: #0EA5E9 !important;">Tech Portfolio</h1>
+        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <h1 class="sitename">Eliott.Sys</h1>
       </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Accueil</a></li>
           <li><a href="#about">À propos</a></li>
           <li><a href="#resume">Parcours</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#cv">CV</a></li>
+          <li><a href="#portfolio">Portfolio (S2)</a></li>
+          <li><a href="#cv">Compétences</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -35,7 +48,422 @@
 
   <main class="main">
 
-    <section id="hero" class="hero section tech-grid-bg">
-      <div class="container text-center" data-aos="fade-up">
-        <div class="tech-badge mb-4">Infrastructures & Cybersécurité</div>
-        <h2 style="font-size: 4rem; font-weight:
+    <section id="hero" class="hero section dark-background tech-grid-bg">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="tech-badge mb-4"><i class="bi bi-shield-check"></i> Systèmes, Réseaux & Cybersécurité</div>
+            <h2 class="hero-title">Eliott Panier</h2>
+            <p class="hero-subtitle">Étudiant en BUT R&T | <span class="typed" data-typed-items="Administrateur Systèmes,Architecte Réseau,Analyste Cybersécurité"></span><span class="typed-cursor" aria-hidden="true">_</span></p>
+            
+            <div class="hero-buttons mt-5">
+              <a href="#about" class="btn-cv-download scrollto">Initialiser la connexion <i class="bi bi-arrow-down-short"></i></a>
+            </div>
+
+            <div class="social-links mt-5">
+              <a href="https://www.instagram.com/pner.el/"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/Tigerid-fr"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Profil Utilisateur</span>
+        <h2>À propos de moi</h2>
+        <p>Aperçu de mon profil, de mes objectifs professionnels et de ma passion pour l'ingénierie des réseaux et télécommunications.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-avatar">
+                  <img src="assets/img/profile/profile-square-3.webp" class="img-fluid" alt="Eliott Panier" onerror="this.src='https://via.placeholder.com/150/0ea5e9/ffffff?text=EP'">
+                  <div class="status-indicator"></div>
+                </div>
+                <h3>Eliott Panier</h3>
+                <span class="role">Admin R&T en formation</span>
+              </div>
+
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <h4>BUT 1</h4>
+                  <p>Niveau</p>
+                </div>
+                <div class="stat-item">
+                  <h4>IUT</h4>
+                  <p>Béthune</p>
+                </div>
+              </div>
+
+              <div class="social-connect">
+                <a href="https://www.instagram.com/pner.el/"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/Tigerid-fr"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+            <div class="content-wrapper">
+              <div class="bio-section">
+                <div class="section-tag">root@eliott:~# whoami</div>
+                <h2>Explorateur du réseau et curieux du numérique.</h2>
+                <p>Je m’appelle Eliott et je poursuis actuellement mes études en Réseaux et Télécommunications à l’IUT. Passionné par les technologies de l’information, je m’intéresse particulièrement à l’administration des réseaux, à la cybersécurité et à l'optimisation des systèmes modernes.</p>
+                <p>Mon objectif : concevoir, déployer et sécuriser des infrastructures réseau performantes pour relever les défis de demain.</p>
+              </div>
+
+              <div class="details-grid">
+                <div class="detail-item">
+                  <i class="bi bi-mortarboard"></i>
+                  <div class="detail-content">
+                    <span>Formation</span>
+                    <strong>BUT Réseaux & Télécoms</strong>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="detail-content">
+                    <span>Localisation</span>
+                    <strong>Hauts-de-France</strong>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <i class="bi bi-envelope"></i>
+                  <div class="detail-content">
+                    <span>Email</span>
+                    <strong>eliottpanier@yahoo.com</strong>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <i class="bi bi-terminal"></i>
+                  <div class="detail-content">
+                    <span>Statut</span>
+                    <strong>En apprentissage</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Historique des logs</span>
+        <h2>Parcours & Expériences</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5">
+          <div class="col-lg-6">
+            <div class="experience-section">
+              <div class="section-header" data-aos="fade-right">
+                <div class="header-content">
+                  <span class="section-badge">Professionnel</span>
+                  <h2>Expériences pro</h2>
+                </div>
+              </div>
+
+              <div class="experience-cards">
+                <div class="exp-card featured" data-aos="zoom-in">
+                  <div class="card-header">
+                    <div class="company-logo"><i class="bi bi-box-seam"></i></div>
+                    <div class="period-badge">Job d'été</div>
+                  </div>
+                  <div class="card-body">
+                    <h3>Intérimaire en logistique</h3>
+                    <p class="company-name">CEVA Logistics (Entrepôt Amazon)</p>
+                    <span class="duration">Juillet-Août 2025</span>
+                    <p class="description">Travail de préparation de commandes (picker). Cette expérience m'a appris l'importance de l'autonomie, de la régularité et du respect des cadences pour rester efficace.</p>
+                    <div class="skills-tags">
+                      <span class="skill-tag">Endurance</span>
+                      <span class="skill-tag">Rigueur</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-card" data-aos="zoom-in">
+                  <div class="card-header">
+                    <div class="company-logo"><i class="bi bi-tools"></i></div>
+                  </div>
+                  <div class="card-body">
+                    <h3>Stagiaire Maintenance</h3>
+                    <p class="company-name">Cabinet de Maintenance Informatique</p>
+                    <span class="duration">Décembre 2021</span>
+                    <p class="description">Découverte du dépannage matériel, du diagnostic système et de la relation client en environnement professionnel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="education-section">
+              <div class="section-header" data-aos="fade-left">
+                <div class="header-content">
+                  <span class="section-badge">Académique</span>
+                  <h2>Parcours Scolaire</h2>
+                </div>
+              </div>
+
+              <div class="education-timeline" data-aos="fade-left">
+                <div class="timeline-track">
+                  
+                  <div class="timeline-item">
+                    <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">2025 - Présent</span>
+                        <span class="degree-level">Études Supérieures</span>
+                      </div>
+                      <h4>BUT Réseaux et Télécommunications</h4>
+                      <p class="institution">IUT de Béthune</p>
+                      <p class="description">Apprentissage de l'administration système (Linux/Windows), du routage Cisco, de l'analyse de signaux et des bases de la cybersécurité.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">Obtenu en 2025</span>
+                        <span class="degree-level">Lycée</span>
+                      </div>
+                      <h4>Baccalauréat Général (NSI / SI)</h4>
+                      <p class="institution">Lycée Sadi Carnot (Bruay-la-Buissière)</p>
+                      <p class="description">Spécialités Numérique et Sciences Informatiques (NSI) et Sciences de l'Ingénieur. Projets Python et Nuit du Code.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Traces & Compétences</span>
+        <h2>Portfolio (SAÉ 14)</h2>
+        <p>Présentation de mes Apprentissages Critiques (AC) selon la méthode réflexive du S2.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up">
+            <li data-filter="*" class="filter-active">Toutes</li>
+            <li data-filter=".filter-creative">Réseaux</li>
+            <li data-filter=".filter-digital">Systèmes</li>
+            <li data-filter=".filter-strategy">Développement</li>
+            <li data-filter=".filter-development">Cybersécurité</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Projet Système" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Systèmes & Infrastructures</span>
+                      <h4>Administrer un OS</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="administrer.html" class="portfolio-details"><i class="bi bi-arrow-right"></i> Voir l'analyse réflexive</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">Windows</span>
+                    <span class="tag">Hardware</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" alt="Projet Cyber" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Cybersécurité</span>
+                      <h4>Sécuriser les flux</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="securiser.html" class="portfolio-details"><i class="bi bi-arrow-right"></i> Voir l'analyse réflexive</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">TryHackMe</span>
+                    <span class="tag">CTF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Projet Dev" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Développement</span>
+                      <h4>Programmation Python</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="programmer.html" class="portfolio-details"><i class="bi bi-arrow-right"></i> Voir l'analyse réflexive</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">NSI</span>
+                    <span class="tag">Nuit du Code</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Spécifications Techniques</span>
+        <h2>Matrice de Compétences</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="exp-card h-100">
+              <div class="card-header">
+                <div class="company-logo"><i class="bi bi-hdd-network"></i></div>
+                <h3 class="mt-3">Réseaux</h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled tech-list">
+                  <li><i class="bi bi-chevron-right"></i><strong> Commutation :</strong> VLANs, STP, 802.1Q.</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Routage :</strong> Statique, RIP, Inter-VLAN.</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Services :</strong> DHCP, DNS, NAT/PAT.</li>
+                </ul>
+                <div class="skills-tags mt-4">
+                  <span class="skill-tag">Cisco IOS</span>
+                  <span class="skill-tag">Packet Tracer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="exp-card h-100">
+              <div class="card-header">
+                <div class="company-logo"><i class="bi bi-terminal-dash"></i></div>
+                <h3 class="mt-3">Systèmes</h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled tech-list">
+                  <li><i class="bi bi-chevron-right"></i><strong> Linux :</strong> Administration Debian/Ubuntu.</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Virtualisation :</strong> VMware, VirtualBox.</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Hardware :</strong> Montage PC, diagnostic.</li>
+                </ul>
+                <div class="skills-tags mt-4">
+                  <span class="skill-tag">Bash</span>
+                  <span class="skill-tag">Windows OS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="exp-card h-100">
+              <div class="card-header">
+                <div class="company-logo"><i class="bi bi-lightning-charge"></i></div>
+                <h3 class="mt-3">Soft Skills & Autres</h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled tech-list">
+                  <li><i class="bi bi-chevron-right"></i><strong> Programmation :</strong> Python (Scripts).</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Rigueur :</strong> Sport (Musculation 4x/sem).</li>
+                  <li><i class="bi bi-chevron-right"></i><strong> Persévérance :</strong> Musique (Guitare 8 ans).</li>
+                </ul>
+                <div class="skills-tags mt-4">
+                  <span class="skill-tag">Autonomie</span>
+                  <span class="skill-tag">Logique</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center">
+            <a href="assets/img/Ecrit_reflexif.pdf" download class="btn-cv-download mt-4">
+              <i class="bi bi-file-earmark-pdf"></i> Télécharger mon Écrit Réflexif (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Eliott.Sys</span>
+          </a>
+          <p>Site web réalisé dans le cadre de la SAE 1.04 à l'IUT de Béthune. Portfolio réflexif BUT1.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.instagram.com/pner.el/"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/Tigerid-fr"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 footer-links text-lg-end">
+          <h4>Navigation Système</h4>
+          <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#portfolio">Portfolio S2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Sécurité supplémentaire au cas où le main.js échoue
+    document.addEventListener("DOMContentLoaded", () => {
+      if(typeof AOS !== 'undefined') {
+        AOS.init({ duration: 800, once: true });
+      }
+    });
+  </script>
+
+</body>
+</html>
