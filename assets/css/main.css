@@ -36,6 +36,74 @@
 }
 
 /*--------------------------------------------------------------
+# THEME CLAIR (Light Mode Override)
+--------------------------------------------------------------*/
+body.light-theme {
+  --background-color: #F8FAFC; /* Gris très clair / blanc cassé */
+  --surface-color: #FFFFFF; /* Blanc pur pour les cartes */
+  --default-color: #475569; /* Gris ardoise pour le texte (lisibilité) */
+  --heading-color: #0F172A; /* Gris très foncé pour les titres */
+  --accent-color: #0284C7; /* Bleu Tech un peu plus sombre pour contraster sur le blanc */
+  --contrast-color: #FFFFFF;
+}
+
+body.light-theme .header {
+  background-color: rgba(248, 250, 252, 0.9);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.15);
+}
+
+body.light-theme .navmenu a {
+  color: #475569;
+}
+
+body.light-theme .exp-card, 
+body.light-theme .profile-card, 
+body.light-theme .portfolio-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Ajustement de la grille réseau pour le mode clair */
+body.light-theme .tech-grid-bg {
+  background-image: 
+    linear-gradient(rgba(2, 132, 199, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+}
+body.light-theme .tech-grid-bg::after {
+  background: radial-gradient(circle at center, transparent 10%, #F8FAFC 80%);
+}
+
+/* Style du bouton Theme Toggle */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+}
+
+@media (max-width: 1199px) {
+  .theme-toggle-btn {
+    margin-right: 50px; /* Pour ne pas chevaucher le menu mobile */
+  }
+}
+
+/*--------------------------------------------------------------
 # Base & Typographie
 --------------------------------------------------------------*/
 html { scroll-behavior: smooth; }
