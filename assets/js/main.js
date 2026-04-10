@@ -237,3 +237,42 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+/**
+ * Système de bascule Dark / Light Mode
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  
+  if (themeToggleBtn) {
+    const icon = themeToggleBtn.querySelector('i');
+    const body = document.body;
+
+    // 1. Vérifier si l'utilisateur avait déjà choisi le mode clair lors d'une précédente visite
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
+      body.classList.add('light-theme');
+      icon.classList.remove('bi-moon-stars');
+      icon.classList.add('bi-sun'); // Change l'icône en soleil
+    }
+
+    // 2. Action au clic sur le bouton
+    themeToggleBtn.addEventListener('click', () => {
+      // Ajoute ou enlève la classe 'light-theme' sur le <body>
+      body.classList.toggle('light-theme');
+      
+      // On vérifie si la classe est active
+      if (body.classList.contains('light-theme')) {
+        // Mode Clair activé
+        icon.classList.remove('bi-moon-stars');
+        icon.classList.add('bi-sun');
+        localStorage.setItem('theme', 'light'); // On sauvegarde le choix
+      } else {
+        // Mode Sombre activé
+        icon.classList.remove('bi-sun');
+        icon.classList.add('bi-moon-stars');
+        localStorage.setItem('theme', 'dark'); // On sauvegarde le choix
+      }
+    });
+  }
+});
