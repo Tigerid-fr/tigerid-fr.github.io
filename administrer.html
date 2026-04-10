@@ -3,76 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>SAE 1.04 - Administrer - Eliott Panier</title>
+  <title>Compétence : Administrer - Eliott Panier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #111; color: white;">
-  <main class="main">
-    <div class="page-title dark-background" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/portfolio/admin-bg.jpg'); background-size: cover; padding: 100px 0;">
-      <div class="container text-center">
-        <h1 style="color: #61dafb;">SAE 1.04 : Administrer</h1>
-        <p class="lead">Hébergement, gestion de contenu et déploiement d'un service web</p>
-      </div>
-    </div>
+<body class="index-page dark-background">
 
-    <section class="section" style="padding: 60px 0;">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <h1 class="sitename">Eliott.Sys</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Accueil</a></li>
+          <li><a href="index.html#portfolio" class="active">Retour au Portfolio</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 100px;">
+    <section class="section">
+      <div class="container section-title">
+        <span class="subtitle">Compétence 2</span>
+        <h2>Administrer les réseaux et l'internet</h2>
+        <p>Analyse réflexive sur la gestion des systèmes (OS), la virtualisation et la sécurité.</p>
+      </div>
+
       <div class="container">
-        <div class="row gy-5">
+        <div class="exp-card mb-5">
+          <div class="card-header border-bottom border-secondary pb-3 mb-4">
+            <h3 style="color: var(--accent-color);">AC1 : Administrer un OS et utiliser la virtualisation</h3>
+            <span class="skill-tag">R2.02 Virtualisation</span>
+            <span class="skill-tag">R1.08 Bases OS</span>
+          </div>
           
-          <div class="col-lg-4">
-            <div class="portfolio-info" style="background: #e3f2fd; padding: 30px; border: 2px solid #61dafb; border-radius: 10px; color: #212529;">
-              <h3 style="color: #0d47a1;">Gestion de Service</h3>
-              <ul class="list-unstyled">
-                <li><strong>Compétence :</strong> Administrer</li>
-                <li><strong>Plateforme :</strong> GitHub Pages</li>
-                <li><strong>Outil de versioning :</strong> Git</li>
-                <li><strong>Statut :</strong> Opérationnel</li>
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="list-unstyled tech-list">
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> Installation et configuration de machines virtuelles (VM) sous Linux et Windows Server via des hyperviseurs.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour apprendre à déployer et isoler des services informatiques sans impacter la machine hôte.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En utilisant les lignes de commande (CLI) sous Linux et les outils de gestion d'OS vus en TP.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Comprendre l'allocation précise des ressources (RAM/CPU) pour faire tourner plusieurs VM simultanément sans saturer le système.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> La puissance de la ligne de commande par rapport aux interfaces graphiques pour l'administration rapide d'un serveur.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Prendre l'habitude de créer des snapshots (sauvegardes d'état) avant chaque modification majeure sur une machine virtuelle.</li>
               </ul>
-              <div class="mt-4">
-                <h5 style="color: #212529;">Compétences clés :</h5>
-                <span class="badge bg-dark">Administration Web</span>
-                <span class="badge bg-primary">Versioning Git</span>
-                <span class="badge bg-info text-dark">Responsive Design</span>
+            </div>
+            <div class="col-lg-4 text-center">
+              <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
+                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
+                <p style="font-size: 12px; color: #cbd5e1;">Capture de mon environnement de virtualisation (VirtualBox / VMware).</p>
+                <img src="assets/img/trace-vm.jpg" alt="Machines Virtuelles" class="img-fluid rounded" style="border: 1px solid rgba(255,255,255,0.1);">
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-8">
-            <h2>Administrer son image et ses services sur Internet</h2>
-            <p>
-              Dans le cadre de cette SAE, j'ai mis en place une infrastructure complète pour diffuser mon portfolio. Administrer, ici, signifie gérer la mise en ligne, le stockage et l'accessibilité d'un service web.
-            </p>
-
-            <div class="content-box mb-4" style="background: #e3f2fd; padding: 25px; border-radius: 10px; border: 2px solid #61dafb; color: #212529;">
-              <h4 style="color: #0d47a1;"><i class="bi bi-cloud-check"></i> Déploiement et Maintenance</h4>
-              <p>Le pilotage de ce projet repose sur des outils standards du monde professionnel :</p>
-              <ul>
-                <li><strong>GitHub Pages :</strong> Configuration du serveur d'hébergement pour rendre le site accessible via une URL publique.</li>
-                <li><strong>Gestion de version (Git) :</strong> Utilisation des commandes <code>commit</code> et <code>push</code> pour administrer les mises à jour en toute sécurité.</li>
-                <li><strong>Rigueur technique :</strong> Respect des normes W3C et gestion des chemins relatifs pour assurer la stabilité du site.</li>
+        <div class="exp-card mb-5">
+          <div class="card-header border-bottom border-secondary pb-3 mb-4">
+            <h3 style="color: var(--accent-color);">AC2 : S'initier à la Cybersécurité et à l'Hygiène Informatique</h3>
+            <span class="skill-tag">SAÉ 1.01</span>
+            <span class="skill-tag">TryHackMe / RootMe</span>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="list-unstyled tech-list">
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> Découverte des principes de sécurité via des plateformes de défis CTF et application des règles de durcissement réseau.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Par passion pour le monde cyber, pour comprendre comment se forment les vulnérabilités afin de mieux configurer les défenses.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> Par auto-formation encadrée par les apports théoriques de la SAÉ 1.01 sur la politique des mots de passe et la gestion des droits.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Faire face à l'immensité du domaine cyber : il faut accepter de chercher pendant des heures sans garantie de trouver immédiatement le "flag".</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> La sécurité est une chaîne dont le maillon faible est souvent l'humain ou une configuration par défaut négligée.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Rédiger systématiquement des "Write-ups" personnels (notes détaillées) après avoir résolu un challenge pour fixer mes connaissances.</li>
               </ul>
             </div>
-
-            <h4>Objectifs pédagogiques</h4>
-            <p>
-              Encadré par <strong>David Mercier</strong> et <strong>Serigne Mamadou Diène</strong>, ce travail m'a permis de maîtriser la chaîne de production d'un site web, de l'adaptation du code Bootstrap au déploiement final.
-            </p>
-
-            <div class="alert alert-primary" style="background: #e3f2fd; border: 1px solid #61dafb; color: #212529; margin-top: 30px;">
-              <i class="bi bi-info-circle me-2"></i>
-              <strong>Bilan :</strong> Ce projet démontre ma capacité à utiliser des outils de versioning essentiels et à administrer un service web fonctionnel.
+            <div class="col-lg-4 text-center">
+              <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
+                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
+                <p style="font-size: 12px; color: #cbd5e1;">Capture de mon profil TryHackMe ou d'une analyse de vulnérabilité.</p>
+                <img src="assets/img/trace-cyber.jpg" alt="TryHackMe" class="img-fluid rounded" style="border: 1px solid rgba(255,255,255,0.1);">
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
-
-  <footer class="text-center py-5">
-    <a href="index.html#portfolio" class="btn btn-outline-info" style="border-radius: 50px; padding: 10px 30px;">← Retour au Portfolio</a>
-  </footer>
 </body>
 </html>
