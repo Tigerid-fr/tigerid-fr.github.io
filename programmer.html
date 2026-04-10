@@ -3,76 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Programmer - Eliott Panier</title>
+  <title>Compétence : Programmer - Eliott Panier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #111; color: white;">
-  <main class="main">
-    <div class="page-title dark-background" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/portfolio/data-bg.jpg'); background-size: cover; padding: 100px 0;">
-      <div class="container text-center">
-        <h1 style="color: #f39c12;">Compétence : Programmer</h1>
-        <p class="lead">SAé 1.05 - Traitement et Visualisation de Données Publiques</p>
-      </div>
-    </div>
+<body class="index-page dark-background">
 
-    <section class="section" style="padding: 60px 0;">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <h1 class="sitename">Eliott.Sys</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Accueil</a></li>
+          <li><a href="index.html#portfolio" class="active">Retour au Portfolio</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 100px;">
+    <section class="section">
+      <div class="container section-title">
+        <span class="subtitle">Compétence 3 & Transversalité</span>
+        <h2>Programmer et Se Professionnaliser</h2>
+        <p>Analyse réflexive sur le développement d'applications simples et l'évolution de mes soft skills.</p>
+      </div>
+
       <div class="container">
-        <div class="row gy-5">
-          <div class="col-lg-4">
-            <div class="portfolio-info" style="background: #fff3e0; padding: 30px; border: 2px solid #f39c12; border-radius: 10px; color: #212529;">
-              <h3 style="color: #e65100;">Fiche Projet</h3>
-              <ul class="list-unstyled">
-                <li><strong>Responsable :</strong> Shahin Gelareh</li>
-                <li><strong>Langage :</strong> Python</li>
-                <li><strong>Gestion :</strong> GitLab Workflow</li>
-                <li><strong>Workflow :</strong> CSV → JSON → Graphique</li>
+        <div class="exp-card mb-5">
+          <div class="card-header border-bottom border-secondary pb-3 mb-4">
+            <h3 style="color: var(--accent-color);">AC1 : Développer des applications simples en équipe</h3>
+            <span class="skill-tag">Nuit du Code</span>
+            <span class="skill-tag">R1.07 Programmation</span>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="list-unstyled tech-list">
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> Développement de scripts et programmes en Python, notamment lors des éditions 2024 et 2025 de "La Nuit du Code" au lycée.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour répondre à des cahiers des charges précis, automatiser des processus logiques et apprendre à collaborer.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En utilisant les structures algorithmiques (boucles, conditions) revues dans le cours R1.07 et en me répartissant les tâches avec mon équipe.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Assurer la compatibilité des morceaux de code écrits par différents membres de l'équipe sous la pression du temps.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> L'importance cruciale de commenter son code et d'avoir une logique algorithmique stricte pour faciliter la relecture.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Utiliser un système de gestion de version comme Git de manière systématique pour éviter les conflits lors de la fusion des fichiers.</li>
               </ul>
-              <div class="mt-4">
-                <h5 style="color: #212529;">Outils utilisés :</h5>
-                <span class="badge bg-dark">Pandas / JSON</span>
-                <span class="badge bg-warning text-dark">QuickChart API</span>
-                <span class="badge bg-secondary">GitLab</span>
+            </div>
+            <div class="col-lg-4 text-center">
+              <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
+                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
+                <p style="font-size: 12px; color: #cbd5e1;">Capture d'un de mes scripts Python commenté.</p>
+                <img src="assets/img/trace-python.jpg" alt="Code Python" class="img-fluid rounded" style="border: 1px solid rgba(255,255,255,0.1);">
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-8">
-            <h2>Transformer la donnée brute en information visuelle</h2>
-            <p>Ce projet consiste à réaliser un script capable d'automatiser le traitement de données ouvertes issues de <strong>data.gouv.fr</strong>.</p>
-
-            <div class="content-box mb-4" style="background: #fff3e0; padding: 25px; border-radius: 10px; border: 2px solid #f39c12; color: #212529;">
-              <h4 style="color: #e65100;"><i class="bi bi-gear-fill"></i> Étapes du pipeline de données</h4>
-              <ul>
-                <li><strong>Extraction :</strong> Récupération automatisée de fichiers CSV.</li>
-                <li><strong>Agrégation :</strong> Calcul de moyennes, maximums et filtrages via Python.</li>
-                <li><strong>Transformation :</strong> Conversion des résultats au format JSON.</li>
-                <li><strong>Visualisation :</strong> Transmission à l'API <em>QuickChart</em> pour rendu graphique.</li>
+        <div class="exp-card mb-5">
+          <div class="card-header border-bottom border-secondary pb-3 mb-4">
+            <h3 style="color: var(--accent-color);">Compétence Transversale : Construire mon identité professionnelle</h3>
+            <span class="skill-tag">R1.11 Portfolio</span>
+            <span class="skill-tag">Expériences Pro & Passions</span>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="list-unstyled tech-list">
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> Travailler en intérim (Amazon/CEVA Logistics) et maintenir un rythme discipliné dans mes passions (Musculation 4x/semaine, Musique depuis 8 ans).</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour gagner en autonomie financière, découvrir la réalité du monde du travail et équilibrer ma vie avec le rythme universitaire.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En faisant preuve d'une grande rigueur personnelle pour concilier mes études, le sport, la musique et mes obligations professionnelles.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Le passage du lycée à l'université, qui demande une organisation bien plus stricte pour ne pas se laisser déborder par la charge de travail.</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> Mes expériences m'ont prouvé que je suis capable de tenir des "quotas" de productivité (logistique) et de m'engager sur le long terme (8 ans de musique).</li>
+                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Chercher à l'avenir des stages ou jobs d'été directement en lien avec les réseaux et télécoms pour consolider mon profil ingénieur.</li>
               </ul>
             </div>
-
-            <h4><i class="bi bi-people-fill"></i> Méthodologie et Collaboration</h4>
-            <p>Le projet repose sur une utilisation rigoureuse de <strong>GitLab</strong> pour le stockage des scripts et de la documentation (Markdown).</p>
-            <ul>
-              <li>Planification des tâches et répartition équitable du travail.</li>
-              <li>Utilisation de Git pour le suivi des versions (commit/push individuels).</li>
-              <li>Rédaction d'un fichier <strong>README.md</strong> pour la documentation utilisateur.</li>
-            </ul>
-
-            <div class="alert alert-warning mt-4" style="background: #fff3e0; border: 1px solid #f39c12; color: #212529;">
-              <i class="bi bi-graph-up me-2"></i>
-              <strong>Bilan :</strong> Ce projet valide ma capacité à coder une solution complète de traitement de données en équipe.
+            <div class="col-lg-4 text-center">
+              <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
+                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
+                <p style="font-size: 12px; color: #cbd5e1;">Badge Amazon CEVA ou photo symbolisant mon autonomie.</p>
+                <img src="assets/img/trace-pro.jpg" alt="Expérience Pro" class="img-fluid rounded" style="border: 1px solid rgba(255,255,255,0.1);">
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
-
-  <footer class="text-center py-5">
-    <a href="index.html#portfolio" class="btn btn-outline-warning" style="border-radius: 50px; color: #f39c12; border-color: #f39c12;">← Retour au Portfolio</a>
-  </footer>
 </body>
 </html>
