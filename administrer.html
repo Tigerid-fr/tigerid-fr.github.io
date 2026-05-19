@@ -3,132 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Compétence : Administrer - Eliott Panier</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <title>Administrer - Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="index-page dark-background">
+  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+  <header id="header" class="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
-        <h1 class="sitename">Eliott.Sys</h1>
+        <h1>Eliott.Sys</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Accueil</a></li>
-          <li><a href="index.html#portfolio" class="active">Retour au Portfolio</a></li>
+          <li><a href="index.html#hero">Initialisation</a></li>
+          <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Basculer le thème">
-        <i class="bi bi-moon-stars"></i>
-      </button>
-
     </div>
   </header>
 
   <main class="main" style="padding-top: 100px;">
     <section class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Compétence 1</span>
-        <h2>Assister l'administrateur du réseau</h2>
-        <p>Analyse réflexive sur la maîtrise des fondamentaux électriques, des réseaux locaux et des systèmes d'exploitation.</p>
+      <div class="container section-title">
+        <span class="subtitle">Bloc de Compétences 1 // Niveau 1</span>
+        <h2>Administrer les réseaux et l’Internet</h2>
+        <p style="max-width: 600px; color: var(--text-body);">Démarche réflexive sur la gestion des infrastructures, des systèmes d'exploitation et la configuration des services réseaux de base.</p>
       </div>
 
       <div class="container">
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC11.01 | Maîtriser les lois fondamentales de l'électricité</h3>
-            <span class="skill-tag">R1.04 Électronique</span>
-            <span class="skill-tag">Expérience dépannage</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai assisté mon père lors de dépannages électriques sur des chantiers et étudié les lois fondamentales en cours de R1.04.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour comprendre la circulation du courant et sécuriser les interventions sur des équipements matériels.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En manipulant des multimètres et en appliquant les ressources du cours sur les fondamentaux des systèmes électroniques (R1.04).</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Passer de la manipulation pratique immédiate sur chantier à la rigueur des calculs de tension et d'intensité.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> L'importance de la sécurité et de la préparation du matériel pour rester efficace et régulier dans mon travail.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Approfondir la lecture de schémas électriques complexes avant l'intervention pratique.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Schéma de circuit R1.04 ou photo d'outillage.</p>
-                <img src="assets/img/trace-elec.jpg" alt="Lois électricité" class="img-fluid rounded">
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="timeline-track">
 
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC11.03 | Configurer les fonctions de base du réseau local</h3>
-            <span class="skill-tag">R1.01 Initiation Réseau</span>
-            <span class="skill-tag">SAÉ 2.01</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai conçu des topologies réseaux et configuré l'adressage IP d'équipements actifs sur Cisco Packet Tracer.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour simuler le fonctionnement d'un réseau local et s'initier aux configurations de base demandées à un technicien.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En mobilisant les cours sur les principes et l'architecture des réseaux (R1.01 et R1.02).</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Comprendre parfaitement le découpage en sous-réseaux et la gestion des VLANs.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> Une configuration rigoureuse est la clé de la connectivité ; la moindre erreur d'adressage bloque tout service.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Mieux documenter mes plans d'adressage avant de lancer la configuration des interfaces.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Topologie Packet Tracer annotée.</p>
-                <img src="assets/img/trace-packet-tracer.jpg" alt="Config réseau" class="img-fluid rounded">
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-lightning-charge"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.01 // Électronique Fondamentale</span>
+              <h4>Maîtriser les lois fondamentales de l’électricité</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai étudié les circuits électriques, manipulé des multimètres en TP et assisté à des dépannages concrets sur site.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les bases physiques indispensables avant d'intervenir en sécurité sur des équipements physiques de réseaux et télécoms.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En mobilisant les ressources théoriques du module R1.04 (Électronique) et en appliquant les lois d'Ohm et de Kirchhoff lors des mesures de tension/courant.</li>
+                    <li><strong>Mes difficultés :</strong> Réussir la transition entre les calculs théoriques complexes sur papier et les mesures physiques fluctuantes à l'oscilloscope.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La rigueur des lois électriques conditionne directement la sécurité des techniciens et l'intégrité du matériel informatique.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Mieux documenter et revérifier mes schémas de montage avant de mettre le circuit sous tension.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1101.jpg" alt="Lois électricité" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.01'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Schéma de circuit / Mesures R1.04]</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC11.04 | Maîtriser les principes fondamentaux des OS</h3>
-            <span class="skill-tag">R1.08 Bases OS</span>
-            <span class="skill-tag">Optimisation Windows</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai assemblé des composants sur carte mère et optimisé des systèmes Windows pour augmenter les performances.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour assurer la fiabilité de la configuration matérielle et exploiter les réglages système avancés pour le jeu.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En explorant les interfaces cachées de Windows via des tutoriels et en utilisant les bases théoriques du cours R1.08.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Faire le tri entre les interfaces "gadgets" et celles ayant une réelle utilité pour le diagnostic.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> La patience et la minutie sont essentielles pour maintenir un poste client fonctionnel.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Utiliser davantage la virtualisation (VMware/VirtualBox) pour tester mes optimisations sans risque pour l'hôte.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Capture du gestionnaire de tâches ou BIOS.</p>
-                <img src="assets/img/trace-sys.jpg" alt="OS et Hardware" class="img-fluid rounded">
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-diagram-3"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.02 // Architecture des Systèmes</span>
+              <h4>Comprendre l'architecture et les fondements des systèmes numériques</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai étudié les principes du codage de l'information (binaire, hexadécimal), l'architecture des ordinateurs et les bases d'Internet.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assimiler la manière dont les données transitent, sont encapsulées et sont traitées à travers les équipements de télécommunication.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Via les ressources des modules d'architecture et d'initiation aux réseaux (R1.01/R1.02), en découpant des trames réseau reçues.</li>
+                    <li><strong>Mes difficultés :</strong> Intégrer la logique des masques de sous-réseau variables (VLSM) et la conversion rapide des adresses IPv4/IPv6.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Que toute la couche haute d'Internet repose sur une encapsulation binaire stricte et standardisée.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Pratiquer des exercices de conversion et de calculs de masques de manière plus régulière pour gagner en automatisme.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1102.jpg" alt="Codage information" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.02'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Tableau d'encapsulation / Trame réseau]</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-gear-fill"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.03 // Initiation Réseau</span>
+              <h4>Configurer les fonctions de base du réseau local</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai conçu des maquettes de réseaux locaux virtuels, configuré des adresses IP, des passerelles et implémenté des VLANs de base.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour être capable de simuler et de mettre en œuvre une connectivité locale fonctionnelle inter-équipements conforme à un plan établi.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En manipulant le logiciel Cisco Packet Tracer et des commutateurs physiques lors des TP de la SAÉ 2.01.</li>
+                    <li><strong>Mes difficultés :</strong> Assurer le routage inter-VLAN correct et ne pas oublier d'activer ou d'encapsuler les ports en mode Trunk.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le moindre décalage d'un seul chiffre dans un masque ou une passerelle détruit la connectivité de toute une zone.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un tableau d'adressage strict sur papier avant de lancer la moindre commande de configuration dans le terminal Cisco.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1103.jpg" alt="Configuration LAN" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.03'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Topologie Packet Tracer annotée]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-terminal"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.04 // Environnements OS</span>
+              <h4>Maîtriser les rôles et les principes fondamentaux des OS</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai manipulé les architectures de gestion des processus, des fichiers et optimisé des configurations systèmes avancées (Windows/Linux).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour comprendre comment interagir avec le système d'exploitation hôte afin d'y configurer par la suite des services réseaux ou de sécurité.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En exploitant les cours de base des OS (R1.08), en utilisant les terminaux PowerShell et Bash pour automatiser ou vérifier des paramètres.</li>
+                    <li><strong>Mes difficultés :</strong> Mémoriser la syntaxe stricte et les droits d'accès utilisateur sous Linux (chmod, chown) pour la sécurisation des répertoires.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'administration d'un réseau passe inévitablement par une maîtrise fine de la console système et du fonctionnement du noyau de l'OS.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Utiliser de manière systématique des machines virtuelles isolées (VMware) pour tester mes modifications système sans impacter la machine physique.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1104.jpg" alt="Systèmes OS" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.04'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture CLI Linux / Gestion Processus]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-exclamation-triangle"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.05 // Diagnostic Réseau</span>
+              <h4>Identifier les dysfonctionnements du réseau local et savoir les signaler</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai analysé des pannes réseau simulées, tracé des coupures de liens et rédigé des rapports d'incidents clairs.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes méthodologiques d'un technicien support capable d'isoler un problème sur la couche physique ou logique.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En utilisant les outils de diagnostic ICMP classiques (`ping`, `traceroute`, `nslookup`) et en inspectant les logs d'erreurs en TP.</li>
+                    <li><strong>Mes difficultés :</strong> Distinguer rapidement si l'origine d'un problème de résolution de nom venait d'un mauvais adressage client ou d'une panne du serveur DNS local.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Qu'un bon diagnostic doit suivre scrupuleusement l'ordre des couches du modèle OSI (du physique vers l'application) pour faire gagner du temps à l'équipe.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Structurer mes rapports d'anomalies de manière plus standardisée en utilisant des fiches d'incidents types.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1105.jpg" alt="Diagnostic" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.05'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Résultats Commandes Ping & Traceroute]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC11.06 // Poste Client</span>
+              <h4>Installer un poste client, expliquer la procédure mise en place</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai assemblé physiquement des postes, configuré les paramètres réseaux hôtes, installé des suites applicatives et documenté mon protocole.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assurer le déploiement conforme et standardisé d'un poste informatique utilisateur au sein d'une infrastructure d'entreprise.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En appliquant les bonnes pratiques de maintenance informatique matérielle et logicielle, complétées par la rédaction d'un guide utilisateur pas-à-pas.</li>
+                    <li><strong>Mes difficultés :</strong> Expliquer les étapes techniques complexes avec des termes simples, clairs et accessibles pour un utilisateur non technicien.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La rédaction d'une procédure claire est aussi importante que l'installation technique elle-même pour assurer la pérennité du parc informatique.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Créer une checklist simplifiée en début de document pour permettre une vérification rapide en fin d'installation.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1106.jpg" alt="Procédure client" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.06'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait de Procédure Technique Rédigée]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <span class="sitename">Eliott.Sys</span>
+      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO S2 BC1 // IUT DE BÉTHUNE</p>
+    </div>
+  </footer>
+
 </body>
 </html>
