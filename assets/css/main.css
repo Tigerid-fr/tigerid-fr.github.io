@@ -1,92 +1,63 @@
 /**
-* Thème : Réseaux & Télécommunications (Cyberpunk Rouge & Dark)
+* Thème : Réseaux & Télécommunications (Arasaka Corporate v2)
 * Modifié pour Portfolio IUT - Eliott Panier
 */
 
 @charset "UTF-8";
 
 /*--------------------------------------------------------------
-# Variables (Thème Cyberpunk Rouge / Dark)
+# Variables (Thème Dark Corporate - Gunmetal & Red)
 --------------------------------------------------------------*/
 :root {
   --default-font: "Roboto", system-ui, -apple-system, sans-serif;
   --heading-font: "Mulish", sans-serif;
   --mono-font: "Fira Code", monospace;
 
-  /* Couleurs Globales - Ambiance Sombre & Rouge Électrique */
-  --background-color: #0A0204; /* Noir ultra profond avec une pointe de rouge */
-  --surface-color: rgba(24, 12, 16, 0.6); /* Translucide teinté rouge/sombre */
-  --default-color: #CBD5E1; /* Texte gris clair pour une excellente lisibilité */
-  --heading-color: #F8FAFC; /* Blanc pur pour les titres */
-  --accent-color: #E11D48; /* Rouge écarlate vif / Néon */
-  --accent-hover: #F43F5E; /* Rouge plus clair pour les hovers */
-  --contrast-color: #FFFFFF;
+  /* Couleurs Globales - Ambiance Arasaka Executive */
+  --bg-color: #121417; /* Gris Gunmetal très sombre, pas noir pur */
+  --surface-color: #1B1E23; /* Cartes gris anthracite */
+  --text-main: #A1ACB8; /* Gris clair pour reposer les yeux */
+  --text-title: #FFFFFF; /* Blanc éclatant pour les titres */
   
-  /* Bordures et ombres néon */
-  --neon-border: rgba(225, 29, 72, 0.25);
-  --neon-glow: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Couleurs Menu Navigation */
-:root {
-  --nav-color: #94A3B8; 
-  --nav-hover-color: #E11D48;
-  --nav-mobile-background-color: #110408;
-}
-
-.dark-background {
-  --background-color: #0A0204;
-  --default-color: #CBD5E1;
-  --heading-color: #ffffff;
+  --accent: #E50914; /* Rouge corporatif agressif */
+  --accent-hover: #FF3333; /* Rouge vif au survol */
+  
+  --border-color: #2D333B; /* Bordures subtiles */
+  --nav-bg: rgba(18, 20, 23, 0.95);
 }
 
 /*--------------------------------------------------------------
-# THEME CLAIR (Light Mode Override)
+# THEME CLAIR (Light Mode - Clinique & Premium)
 --------------------------------------------------------------*/
 body.light-theme {
-  --background-color: #FAF9F9; /* Blanc cassé très propre */
-  --surface-color: #FFFFFF; /* Blanc pur pour les cartes */
-  --default-color: #334155; /* Gris ardoise foncé pour le texte */
-  --heading-color: #0F172A; /* Titres presque noirs */
-  --accent-color: #BE123C; /* Rouge plus sombre et élégant pour le contraste */
-  --accent-hover: #E11D48;
-  --contrast-color: #FFFFFF;
-  --neon-border: rgba(190, 18, 60, 0.1);
+  --bg-color: #F4F5F7; /* Gris perle très clair */
+  --surface-color: #FFFFFF; /* Blanc pur absolu */
+  --text-main: #474D54; /* Gris ardoise lisible */
+  --text-title: #1A1D20; /* Noir/Gris très profond */
+  
+  --accent: #D32F2F; /* Rouge un peu plus sombre pour contraster sur le blanc */
+  --accent-hover: #B71C1C;
+  
+  --border-color: #E1E4E8;
+  --nav-bg: rgba(255, 255, 255, 0.95);
 }
 
-body.light-theme .header {
-  background-color: rgba(250, 249, 249, 0.9);
-  border-bottom: 1px solid rgba(190, 18, 60, 0.15);
-}
-
-body.light-theme .navmenu a {
-  color: #334155;
+body.light-theme .tech-grid-bg {
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
 }
 
 body.light-theme .exp-card, 
 body.light-theme .profile-card, 
 body.light-theme .portfolio-card {
-  background: #FFFFFF !important;
-  border: 1px solid rgba(190, 18, 60, 0.1) !important;
-  box-shadow: 0 4px 20px rgba(190, 18, 60, 0.05) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* Ajustement de la grille réseau pour le mode clair */
-body.light-theme .tech-grid-bg {
-  background-image: 
-    linear-gradient(rgba(190, 18, 60, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(190, 18, 60, 0.04) 1px, transparent 1px);
-}
-body.light-theme .tech-grid-bg::after {
-  background: radial-gradient(circle at center, transparent 10%, #FAF9F9 85%);
-}
-
-/* Style du bouton Theme Toggle */
+/* Toggle Thème - Design minimaliste */
 .theme-toggle-btn {
   background: transparent;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-title);
+  border-radius: 2px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -94,14 +65,13 @@ body.light-theme .tech-grid-bg::after {
   justify-content: center;
   cursor: pointer;
   margin-left: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   z-index: 999;
 }
 
 .theme-toggle-btn:hover {
-  background: var(--accent-color);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(225, 29, 72, 0.5);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 1199px) {
@@ -115,103 +85,216 @@ body.light-theme .tech-grid-bg::after {
 --------------------------------------------------------------*/
 html { scroll-behavior: smooth; }
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--text-main);
+  background-color: var(--bg-color);
   font-family: var(--default-font);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a { color: var(--accent-color); text-decoration: none; transition: 0.3s; }
+a { color: var(--accent); text-decoration: none; transition: 0.2s; }
 a:hover { color: var(--accent-hover); text-decoration: none; }
-h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading-font); font-weight: 700; }
+h1, h2, h3, h4, h5, h6 { color: var(--text-title); font-family: var(--heading-font); font-weight: 700; }
 p { line-height: 1.7; }
 
 /*--------------------------------------------------------------
 # Header & Navigation
 --------------------------------------------------------------*/
 .header {
-  background-color: rgba(10, 2, 4, 0.85);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid var(--neon-border);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   padding: 15px 0;
-  transition: all 0.5s;
+  transition: all 0.3s;
   z-index: 997;
 }
 
-.header .logo h1 { font-size: 26px; margin: 0; color: var(--heading-color); letter-spacing: 1px; }
-.tech-logo-icon { font-size: 28px; color: var(--accent-color); margin-right: 10px; text-shadow: 0 0 12px rgba(225, 29, 72, 0.6); }
+.header .logo h1 { font-size: 24px; margin: 0; color: var(--text-title); letter-spacing: 2px; font-weight: 800; text-transform: uppercase; }
+.tech-logo-icon { font-size: 24px; color: var(--accent); margin-right: 12px; }
 
 /* Navmenu */
 @media (min-width: 1200px) {
   .navmenu ul { margin: 0; padding: 0; display: flex; list-style: none; align-items: center; }
   .navmenu a {
-    color: var(--nav-color); padding: 18px 15px; font-size: 15px;
-    font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+    color: var(--text-main); padding: 18px 15px; font-size: 14px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s;
   }
-  .navmenu li:hover>a, .navmenu .active { color: var(--accent-color); text-shadow: 0 0 8px rgba(225, 29, 72, 0.5); }
+  .navmenu li:hover>a, .navmenu .active { color: var(--accent); }
 }
 
 @media (max-width: 1199px) {
-  .mobile-nav-toggle { color: var(--contrast-color); font-size: 28px; cursor: pointer; }
+  .mobile-nav-toggle { color: var(--text-title); font-size: 28px; cursor: pointer; }
   .navmenu ul {
     display: none; position: absolute; inset: 60px 20px 20px 20px;
-    background-color: var(--nav-mobile-background-color); border: 1px solid var(--neon-border);
-    border-radius: 10px; padding: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    background-color: var(--surface-color); border: 1px solid var(--border-color);
+    border-radius: 2px; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
-  .navmenu a { color: #fff; padding: 10px 20px; display: block; font-weight: 500; }
+  .navmenu a { color: var(--text-title); padding: 10px 20px; display: block; font-weight: 500; }
   .mobile-nav-active .navmenu>ul { display: block; }
 }
 
 /*--------------------------------------------------------------
-# Hero Section (Grille Réseau Rouge)
+# Hero Section (Matrice Corporate)
 --------------------------------------------------------------*/
 .tech-grid-bg {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--background-color);
-  /* Un quadrillage plus visible et intense */
-  background-image: 
-    linear-gradient(rgba(225, 29, 72, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(225, 29, 72, 0.08) 1px, transparent 1px);
-  background-size: 45px 45px;
+  background-color: var(--bg-color);
+  /* Matrice de points élégante à la place des lignes */
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 30px 30px;
   background-position: center center;
 }
 
 .tech-grid-bg::after {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at center, transparent 10%, var(--background-color) 85%);
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg-color) 80%);
   z-index: 0;
 }
 
 .hero .container { position: relative; z-index: 2; }
-.hero-title { font-size: 56px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 0 25px rgba(225, 29, 72, 0.5); }
-.hero-subtitle { font-size: 22px; color: #cbd5e1; font-family: var(--mono-font); }
+.hero-title { font-size: 60px; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: var(--text-title); }
+.hero-subtitle { font-size: 20px; color: var(--text-main); font-family: var(--mono-font); }
 
 .tech-badge {
-  display: inline-block; padding: 8px 20px;
-  background: rgba(225, 29, 72, 0.1); border: 1px solid rgba(225, 29, 72, 0.3);
-  color: var(--accent-color); border-radius: 5px; font-family: var(--mono-font);
-  font-size: 13px; font-weight: 500; letter-spacing: 1px;
-  box-shadow: 0 0 12px rgba(225, 29, 72, 0.2);
+  display: inline-block; padding: 6px 16px;
+  background: transparent; border: 1px solid var(--accent);
+  color: var(--accent); border-radius: 2px; font-family: var(--mono-font);
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
 }
 
-/* Curseur clignotant pour le texte tapé */
-.typed-cursor { font-size: 26px; color: var(--accent-color); animation: blink 1s infinite; }
+.typed-cursor { font-size: 26px; color: var(--accent); animation: blink 1s infinite; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /*--------------------------------------------------------------
-# Boutons et Liens Cyber
+# Boutons et Liens
 --------------------------------------------------------------*/
 .btn-cv-download {
   display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(225, 29, 72, 0.08) !important;
-  color: var(--accent-color) !important;
-  border: 1px solid var(--accent-color) !important;
-  padding: 12px 30px; border-radius: 5px; font-family: var(--mono-font);
-  font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
-  transition: all 0.3s ease; box-shadow: 0 0 15px rgba(225, 29, 72, 0.15);
+  background: var(--accent) !important;
+  color: #FFF !important;
+  border: none !important;
+  padding: 14px 32px; border-radius: 2px; font-family: var(--mono-font);
+  font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+  transition: all 0.2s ease;
 }
 
-.btn-
+.btn-cv-download:hover {
+  background: var(--accent-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.hero .social-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 2px;
+  background: transparent; border: 1px solid var(--border-color);
+  color: var(--text-main); font-size: 18px; margin: 0 8px; transition: 0.2s;
+}
+.hero .social-links a:hover {
+  border-color: var(--accent); color: var(--accent);
+}
+
+/*--------------------------------------------------------------
+# Cartes (Profil, Expériences, CV) - Bords tranchants
+--------------------------------------------------------------*/
+section { padding: 90px 0; }
+.section-title { text-align: left; padding-bottom: 40px; border-bottom: 1px solid var(--border-color); margin-bottom: 50px; }
+.section-title h2 { font-size: 32px; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
+.section-title .subtitle { color: var(--accent); font-family: var(--mono-font); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Conteneurs stricts et carrés */
+.profile-card, .detail-item, .exp-card, .timeline-content, .portfolio-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 2px; /* Presque pas d'arrondi */
+  padding: 30px;
+  transition: border-color 0.2s ease;
+  position: relative;
+}
+
+/* Ligne rouge à gauche pour le style "dossier confidentiel" */
+.profile-card::before, .exp-card::before, .portfolio-card::before {
+  content: ''; position: absolute; top: -1px; left: -1px; bottom: -1px; width: 3px;
+  background-color: transparent; transition: background-color 0.2s;
+}
+
+.profile-card:hover::before, .exp-card:hover::before, .portfolio-card:hover::before {
+  background-color: var(--accent);
+}
+.profile-card:hover, .exp-card:hover, .portfolio-card:hover {
+  border-color: var(--border-color); /* Pas de changement global, juste la barre latérale */
+}
+
+/* Section Profil */
+.profile-avatar { width: 120px; height: 120px; margin: 0 auto 20px; border-radius: 2px; border: 2px solid var(--border-color); padding: 4px; position: relative; }
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+.status-indicator { position: absolute; bottom: -5px; right: -5px; width: 16px; height: 16px; background: var(--accent); border: 2px solid var(--surface-color); }
+
+.section-tag, .section-badge {
+  display: inline-block; padding: 4px 12px; font-family: var(--mono-font);
+  background: var(--border-color); color: var(--text-title);
+  font-size: 12px; font-weight: 600; margin-bottom: 20px; border-radius: 2px; text-transform: uppercase;
+}
+
+.details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+.detail-item { padding: 15px; display: flex; align-items: center; gap: 15px; background: transparent; border-color: var(--border-color); }
+.detail-item i { font-size: 24px; color: var(--text-main); }
+.detail-item span { display: block; font-size: 11px; color: var(--text-main); text-transform: uppercase; letter-spacing: 1px; }
+.detail-item strong { color: var(--text-title); font-size: 14px; }
+
+/* Section Parcours & CV */
+.company-logo, .timeline-marker {
+  width: 40px; height: 40px; border-radius: 2px;
+  background: var(--bg-color); border: 1px solid var(--border-color);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-title); font-size: 18px;
+}
+
+.exp-card h3, .timeline-content h4 { color: var(--text-title); font-size: 18px; margin-top: 15px; }
+.company-name, .institution { color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 10px; }
+.duration, .year-range { display: inline-block; border: 1px solid var(--border-color); padding: 2px 8px; border-radius: 2px; font-size: 11px; font-family: var(--mono-font); color: var(--text-main); margin-bottom: 15px;}
+
+.timeline-track { border-left: 1px solid var(--border-color); padding-left: 30px; margin-left: 20px; position: relative; }
+.timeline-item { position: relative; margin-bottom: 30px; }
+.timeline-marker { position: absolute; left: -50px; top: 0; background: var(--surface-color); }
+
+/* Listes techniques CV */
+.tech-list li { padding: 8px 0; border-bottom: 1px solid var(--border-color); color: var(--text-main); font-size: 14px; }
+.tech-list li i { color: var(--accent); margin-right: 8px; font-size: 12px; }
+.tech-list li strong { color: var(--text-title); }
+
+/* Tags de Compétences */
+.skills-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag, .project-tags .tag {
+  background: transparent; color: var(--text-main);
+  border: 1px solid var(--border-color); font-family: var(--mono-font);
+  font-size: 11px; padding: 4px 10px; border-radius: 2px; text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Portfolio (Cartes Projets)
+--------------------------------------------------------------*/
+.portfolio-card { text-align: left !important; }
+.portfolio-card .icon-wrapper { margin: 0 0 20px 0 !important; width: 60px !important; height: 60px !important; display: flex; align-items: center; justify-content: center; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2px !important; }
+.portfolio-card .icon-wrapper i { color: var(--text-title); font-size: 24px; }
+.portfolio-card h3 { color: var(--text-title) !important; font-size: 20px; margin-bottom: 10px; }
+.portfolio-card p { color: var(--text-main); }
+.portfolio-card .btn-cv-download { margin-top: 15px; }
+
+/*--------------------------------------------------------------
+# Footer & Utilitaires
+--------------------------------------------------------------*/
+.footer { border-top: 1px solid var(--border-color); padding: 40px 0; margin-top: 40px; background: var(--bg-color); }
+.footer .sitename { color: var(--text-title); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+.scroll-top { position: fixed; right: 20px; bottom: 20px; width: 40px; height: 40px; background: var(--surface-color); border: 1px solid var(--border-color); color: var(--text-title); border-radius: 2px; display: flex; align-items: center; justify-content: center; visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999; }
+.scroll-top:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.scroll-top.active { visibility: visible; opacity: 1; }
+
+@media (max-width: 768px) {
+  .details-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 32px; }
+  .hero-subtitle { font-size: 16px; }
+}
