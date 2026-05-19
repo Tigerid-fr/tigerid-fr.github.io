@@ -3,104 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Crédits - Eliott Panier</title>
+  <title>Crédits - Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="index-page">
+  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename">Tech Portfolio</h1>
+  <header id="header" class="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <h1>Eliott.Sys</h1>
       </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Retour Accueil</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="main">
-    <section class="terms-of-service section" style="padding-top: 120px;">
-      <div class="container">
-        <div class="tos-header text-center" data-aos="fade-up">
-          <h2>Crédits</h2>
-        </div>
+  <main class="main" style="padding-top: 100px;">
+    <section class="section">
+      <div class="container section-title text-center">
+        <span class="subtitle">Ressources // Dépendances</span>
+        <h2>Crédits & Technologies</h2>
+        <p style="color: var(--text-body);">Reconnaissance des outils et frameworks utilisés pour le déploiement de l'interface.</p>
+      </div>
 
-        <div class="tos-content">
-          <div class="row gy-4">
-            
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box" style="border-left-color: #4285f4;">
-                <i class="bi bi-robot" style="color: #4285f4;"></i>
-                <div class="alert-content">
-                  <h5>Intelligence Artificielle</h5>
-                  <p>Images d'illustration générées via <strong>Gemini</strong> (Google).</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box">
-                <i class="bi bi-bootstrap"></i>
-                <div class="alert-content">
-                  <h5>Framework & Design</h5>
-                  <p>Structure basée sur <strong>Bootstrap v5.3.8</strong> et le template <strong>Craftivo</strong> par BootstrapMade.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box">
-                <i class="bi bi-hdd-network"></i>
-                <div class="alert-content">
-                  <h5>Hébergement & Versioning</h5>
-                  <p>Site propulsé par <strong>GitHub Pages</strong>. Gestion du code source via <strong>Git</strong>.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box">
-                <i class="bi bi-fonts"></i>
-                <div class="alert-content">
-                  <h5>Typographie</h5>
-                  <p>Polices <strong>Roboto</strong>, <strong>Mulish</strong> et <strong>Raleway</strong> servies par Google Fonts.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box">
-                <i class="bi bi-image"></i>
-                <div class="alert-content">
-                  <h5>Iconographie</h5>
-                  <p>Bibliothèque d'icônes vectorielles par <strong>Bootstrap Icons</strong>.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="alert-box">
-                <i class="bi bi-code-slash"></i>
-                <div class="alert-content">
-                  <h5>Librairies JavaScript</h5>
-                  <p>Animations avec <strong>AOS.js</strong>, galeries avec <strong>GLightbox</strong> et effets de texte avec <strong>Typed.js</strong>.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <div class="container" style="max-width: 800px;">
+        <div class="exp-card">
+          <ul class="list-unstyled tech-list">
+            <li><strong>Architecture & Design :</strong> Thème CSS personnalisé "Blood & Chrome" codé spécifiquement pour ce portfolio (HTML5 / CSS3 avancés, Animations Keyframes, Glassmorphism).</li>
+            <li><strong>Framework CSS :</strong> <a href="https://getbootstrap.com/" target="_blank">Bootstrap v5</a> (Utilisé pour le système de grille fluide et les utilitaires responsives).</li>
+            <li><strong>Typographie :</strong> Google Fonts (<a href="https://fonts.google.com/specimen/Fira+Code" target="_blank">Fira Code</a> pour les éléments terminaux, Roboto & Mulish pour la lecture).</li>
+            <li><strong>Iconographie :</strong> <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a>.</li>
+            <li><strong>Hébergement et Déploiement :</strong> Environnement <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> via Git.</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
-  
-  <footer id="footer" class="footer">
-    <div class="container text-center mt-4">
-      <a href="index.html" class="btn btn-outline-warning">Retour à l'accueil</a>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <span class="sitename">Eliott.Sys</span>
+      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // ACKNOWLEDGMENTS</p>
     </div>
   </footer>
 
 </body>
 </html>
-
