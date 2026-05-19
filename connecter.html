@@ -3,132 +3,188 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Compétence : Connecter - Eliott Panier</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <title> Connecter - Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="index-page dark-background">
+  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+  <header id="header" class="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
-        <h1 class="sitename">Eliott.Sys</h1>
+        <h1>Eliott.Sys</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Accueil</a></li>
-          <li><a href="index.html#portfolio" class="active">Retour au Portfolio</a></li>
+          <li><a href="index.html#hero">Initialisation</a></li>
+          <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Basculer le thème">
-        <i class="bi bi-moon-stars"></i>
-      </button>
-
     </div>
   </header>
 
- <main class="main" style="padding-top: 100px;">
+  <main class="main" style="padding-top: 100px;">
     <section class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Compétence 2</span>
-        <h2>Découvrir les transmissions et la ToIP</h2>
-        <p>Analyse réflexive sur la mesure des signaux, les systèmes de transmissions et le déploiement de supports.</p>
+      <div class="container section-title">
+        <span class="subtitle">Bloc de Compétences 2 // Niveau 1</span>
+        <h2>Connecter les entreprises et les usagers</h2>
+        <p style="max-width: 600px; color: var(--text-body);">Démarche réflexive sur l'analyse physique des signaux, le déploiement des supports de transmission et la mise en œuvre de la téléphonie IP.</p>
       </div>
 
       <div class="container">
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC12.01 | Mesurer, analyser et commenter les signaux</h3>
-            <span class="skill-tag">R1.13 Math du Signal</span>
-            <span class="skill-tag">Oscilloscope</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai utilisé des oscilloscopes et générateurs pour mesurer les caractéristiques de signaux (période, fréquence, amplitude).</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour valider expérimentalement les concepts théoriques de classification des signaux.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En mobilisant les outils mathématiques du signal (R1.13) pour interpréter les courbes visuelles.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Synchroniser correctement l'oscilloscope pour stabiliser le signal à l'écran.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> La mesure physique est indispensable pour diagnostiquer un problème de transmission au niveau matériel.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Documenter mes prises de mesures avec plus de rigueur pour faciliter la rédaction de comptes-rendus.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Capture d'écran d'un signal à l'oscilloscope.</p>
-                <img src="assets/img/trace-oscilloscope.jpg" alt="Mesure signal" class="img-fluid rounded">
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="timeline-track">
 
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC12.02 | Caractériser des systèmes de transmissions élémentaires</h3>
-            <span class="skill-tag">SAÉ 1.03</span>
-            <span class="skill-tag">R2.06 Numérisation</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai étudié les supports de transmission (fibre, cuivre) et les principes de numérisation de l'information.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour comprendre comment transformer une information physique en données binaires pour le réseau.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En participant à la SAÉ 1.03 pour découvrir un dispositif de transmission réel.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Comprendre les pertes de signal liées aux supports physiques (atténuation).</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> Le choix du support de transmission dépend directement du débit et de la distance nécessaires.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Réaliser davantage de simulations de transmission sur Scilab pour visualiser les effets du bruit.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Schéma de chaîne de transmission.</p>
-                <img src="assets/img/trace-transmission.jpg" alt="Systèmes transmission" class="img-fluid rounded">
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-activity"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC12.01 // Théorie du Signal</span>
+              <h4>Mesurer, analyser et commenter les signaux</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai branché des générateurs de signaux à des oscilloscopes pour capturer, observer et extraire les grandeurs physiques de diverses ondes.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour confronter les concepts mathématiques abstraits à la réalité physique des signaux électriques qui transportent la donnée.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En mobilisant les formules du module R1.13 (Mathématiques du signal) afin de calculer précisément des périodes, fréquences et amplitudes crête à crête.</li>
+                    <li><strong>Mes difficultés :</strong> Régler correctement la synchronisation (Trigger) de l'oscilloscope sur des signaux bruités pour stabiliser l'affichage à l'écran.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Qu'aucun signal réel n'est parfait et que la distorsion physique impacte directement la qualité de la liaison informatique.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Prendre des notes systématiques et rigoureuses des échelles de l'appareil (Volts/Div) pour accélérer la rédaction du compte-rendu de TP.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1201.jpg" alt="Analyse signal" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.01'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture Écran Courbe Oscilloscope]</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="exp-card mb-5" data-aos="fade-up">
-          <div class="card-header border-bottom border-secondary pb-3 mb-4">
-            <h3 style="color: var(--accent-color);">AC12.03 | Déployer des supports de transmission</h3>
-            <span class="skill-tag">TP Câblage</span>
-            <span class="skill-tag">SAÉ 2.01</span>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="list-unstyled tech-list">
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'ai fait :</strong> J'ai réalisé des câbles réseaux et effectué le raccordement physique d'équipements informatiques.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Pourquoi je l'ai fait :</strong> Pour maîtriser la couche physique du modèle OSI et assurer la liaison physique du réseau.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Comment je l'ai fait :</strong> En utilisant des pinces à sertir et des testeurs de câbles lors des séances de TP de câblage.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Mes difficultés :</strong> Réussir le sertissage parfait des brins RJ45 sans créer de mauvais contacts.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que j'en ai appris :</strong> La qualité du déploiement physique conditionne toute la stabilité future des couches supérieures du réseau.</li>
-                <li class="mb-3"><strong style="color: var(--accent-color);">Ce que je ferais autrement :</strong> Vérifier systématiquement la continuité de chaque câble avec un testeur avant de l'intégrer en baie de brassage.</li>
-              </ul>
-            </div>
-            <div class="col-lg-4 text-center">
-              <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px dashed var(--accent-color);">
-                <h4 style="font-size: 16px; margin-bottom: 15px;">Trace pertinente</h4>
-                <p style="font-size: 12px; color: var(--default-color);">Photo d'un câble serti ou d'une baie.</p>
-                <img src="assets/img/trace-cablage.jpg" alt="Déploiement supports" class="img-fluid rounded">
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-calculator"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC12.02 // Transmissions</span>
+              <h4>Caractériser des systèmes de transmissions élémentaires</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai étudié les architectures de chaînes de transmission (modulation, numérisation) et analysé l'impact de l'atténuation sur la fibre optique et le cuivre.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assimiler le fonctionnement mathématique et physique du transport binaire de l'information sur de longues distances.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Lors de la SAÉ 1.03, en m'appuyant sur les modules théoriques de numérisation (R2.06) et en simulant des comportements de canaux bruités.</li>
+                    <li><strong>Mes difficultés :</strong> Comprendre et appliquer les calculs de puissance en Décibels (dB) appliqués aux pertes en ligne de la fibre optique.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le choix d'un média physique (cuivre vs fibre) est un compromis strict dicté par des contraintes de distance, de bande passante et d'atténuation.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Multiplier les exercices de modélisation sur logiciel (Scilab/Python) pour mieux visualiser l'influence du bruit thermique.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1202.jpg" alt="Système transmission" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.02'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Schéma Chaîne de Transmission / Graphique]</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-ethernet"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC12.03 // Infrastructures Physiques</span>
+              <h4>Déployer des supports de transmission</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai réalisé des opérations de dénudage, câblé des brins RJ45, effectué des raccordements sur des panneaux de brassage et testé la continuité.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser la couche 1 (Physique) du modèle OSI et garantir une infrastructure de câblage saine pour les couches supérieures.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Lors d'ateliers de TP pratiques, équipé de pinces à sertir, de dénudeurs de câbles torsadés et de testeurs de continuité de paires.</li>
+                    <li><strong>Mes difficultés :</strong> Respecter scrupuleusement l'ordre exact des couleurs de la norme T568B sans croiser ou fragiliser les fils de cuivre lors de l'insertion dans la fiche.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un réseau ultra-performant côté logiciel s'effondre instantanément si le déploiement physique souffre d'un mauvais contact.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Tester systématiquement le câble de manière isolée avant de l'intégrer définitivement dans la goulotte ou la baie de brassage.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1203.jpg" alt="Déploiement câblage" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.03'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Photo Câble Serti / Baie de Brassage]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-telephone"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC12.04 // Téléphonie sur IP</span>
+              <h4>Connecter les systèmes de ToIP</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai raccordé des téléphones IP au réseau local, configuré des extensions de base et validé l'établissement de communications vocales.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour appréhender l'intégration des services de voix convergés sur une infrastructure de données IP classique.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En exploitant les TP dédiés à la téléphonie, en attribuant dynamiquement des profils via DHCP et en analysant l'enregistrement de terminaux.</li>
+                    <li><strong>Mes difficultés :</strong> Assurer la priorisation des flux (QoS) dans les commutateurs pour éviter les coupures ou dégradations de la voix lors des appels.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Que la voix sur IP requiert une stabilité réseau accrue par rapport au simple transfert de fichiers Web.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un schéma d'architecture ToIP complet intégrant les numéros de ports logiques avant de lancer les configurations.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1204.jpg" alt="ToIP Connect" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.04'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Topologie VoIP / Capture Téléphone IP]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-chat-left-quote"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC12.05 // Communication Professionnelle</span>
+              <h4>Communiquer avec un tiers et adapter son discours</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> J'ai participé à des simulations de présentations techniques, rédigé des mails formels et présenté l'état d'avancement de mes projets.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour être capable d'interagir efficacement avec un client ou un collègue en adaptant mon vocabulaire technique selon son profil.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En m'appuyant sur les modules d'expression-communication et d'anglais technique pour structurer des argumentations professionnelles.</li>
+                    <li><strong>Mes difficultés :</strong> Réussir à vulgariser instantanément des acronymes réseaux complexes (ex : NAT, DHCP, VLAN) face à un interlocuteur non technique.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un excellent technicien doit aussi être un bon communicant ; savoir expliquer clairement une solution est la clé de la relation client.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Préparer systématiquement un glossaire simplifié ou des schémas visuels d'appui avant d'entamer une réunion de restitution.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac1205.jpg" alt="Communication" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.05'">
+                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait Support Visuel / Mail Formel]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <span class="sitename">Eliott.Sys</span>
+      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO S2 BC2 // IUT DE BÉTHUNE</p>
+    </div>
+  </footer>
+
 </body>
 </html>
