@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -12,7 +11,7 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -25,10 +24,12 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
         <h1 class="sitename">Eliott.Sys</h1>
       </a>
@@ -43,22 +44,13 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Basculer le thème">
-        <i class="bi bi-moon-stars"></i>
-      </button>
 
     </div>
   </header>
 
   <main class="main">
 
-    <section id="hero" class="hero section dark-background tech-grid-bg">
+    <section id="hero" class="hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
@@ -92,7 +84,7 @@
             <div class="profile-card">
               <div class="profile-header">
                 <div class="profile-avatar">
-                  <img src="assets/img/profile/profile-square-3.webp" class="img-fluid" alt="Eliott Panier" onerror="this.src='https://via.placeholder.com/150/0ea5e9/ffffff?text=EP'">
+                  <img src="assets/img/profile/profile-square-3.webp" class="img-fluid" alt="Eliott Panier" onerror="this.src='https://via.placeholder.com/150/111115/e50914?text=EP'">
                   <div class="status-indicator"></div>
                 </div>
                 <h3>Eliott Panier</h3>
@@ -110,9 +102,9 @@
                 </div>
               </div>
 
-              <div class="social-connect">
-                <a href="https://www.instagram.com/pner.el/"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/Tigerid-fr"><i class="bi bi-github"></i></a>
+              <div class="social-connect mt-4 text-center">
+                <a href="https://www.instagram.com/pner.el/" style="color: var(--red-neon); margin: 0 10px; font-size: 24px;"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/Tigerid-fr" style="color: var(--red-neon); margin: 0 10px; font-size: 24px;"><i class="bi bi-github"></i></a>
               </div>
             </div>
           </div>
@@ -121,7 +113,7 @@
             <div class="content-wrapper">
               <div class="bio-section">
                 <div class="section-tag">root@eliott:~# whoami</div>
-                <h2>Explorateur du réseau et curieux du numérique.</h2>
+                <h2 style="color: #fff;">Explorateur du réseau et curieux du numérique.</h2>
                 <p>Je m’appelle Eliott et je poursuis actuellement mes études en Réseaux et Télécommunications à l’IUT. Passionné par les technologies de l’information, je m’intéresse particulièrement à l’administration des réseaux, à la cybersécurité et à l'optimisation des systèmes modernes.</p>
                 <p>Mon objectif : concevoir, déployer et sécuriser des infrastructures réseau performantes pour relever les défis de demain.</p>
               </div>
@@ -138,7 +130,7 @@
                   <i class="bi bi-geo-alt"></i>
                   <div class="detail-content">
                     <span>Localisation</span>
-                    <strong>Hauts-de-France</strong>
+                    <strong>Bruay-la-Buissière</strong>
                   </div>
                 </div>
                 <div class="detail-item">
@@ -175,21 +167,18 @@
               <div class="section-header" data-aos="fade-right">
                 <div class="header-content">
                   <span class="section-badge">Professionnel</span>
-                  <h2>Expériences pro</h2>
+                  <h2 style="color: #fff; margin-bottom: 30px;">Expériences pro</h2>
                 </div>
               </div>
 
-              <div class="experience-cards">
-                <div class="exp-card featured" data-aos="zoom-in">
-                  <div class="card-header">
-                    <div class="company-logo"><i class="bi bi-box-seam"></i></div>
-                    <div class="period-badge">Job d'été</div>
-                  </div>
-                  <div class="card-body">
+              <div class="experience-cards timeline-track">
+                <div class="exp-card timeline-item" data-aos="zoom-in">
+                  <div class="timeline-marker"><i class="bi bi-box-seam"></i></div>
+                  <div class="timeline-content">
                     <h3>Intérimaire en logistique</h3>
                     <p class="company-name">CEVA Logistics (Entrepôt Amazon)</p>
                     <span class="duration">Juillet-Août 2025</span>
-                    <p class="description">Travail de préparation de commandes (picker). Cette expérience m'a appris l'importance de l'autonomie, de la régularité et du respect des cadences pour rester efficace.</p>
+                    <p class="description" style="color: var(--text-body);">Travail de préparation de commandes (picker). Cette expérience m'a appris l'importance de l'autonomie, de la régularité et du respect des cadences pour rester efficace.</p>
                     <div class="skills-tags">
                       <span class="skill-tag">Endurance</span>
                       <span class="skill-tag">Rigueur</span>
@@ -197,15 +186,13 @@
                   </div>
                 </div>
 
-                <div class="exp-card" data-aos="zoom-in">
-                  <div class="card-header">
-                    <div class="company-logo"><i class="bi bi-tools"></i></div>
-                  </div>
-                  <div class="card-body">
+                <div class="exp-card timeline-item" data-aos="zoom-in">
+                  <div class="timeline-marker"><i class="bi bi-tools"></i></div>
+                  <div class="timeline-content">
                     <h3>Stagiaire Maintenance</h3>
                     <p class="company-name">Cabinet de Maintenance Informatique</p>
                     <span class="duration">Décembre 2021</span>
-                    <p class="description">Découverte du dépannage matériel, du diagnostic système et de la relation client en environnement professionnel.</p>
+                    <p class="description" style="color: var(--text-body);">Découverte du dépannage matériel, du diagnostic système et de la relation client en environnement professionnel.</p>
                   </div>
                 </div>
               </div>
@@ -217,39 +204,29 @@
               <div class="section-header" data-aos="fade-left">
                 <div class="header-content">
                   <span class="section-badge">Académique</span>
-                  <h2>Parcours Scolaire</h2>
+                  <h2 style="color: #fff; margin-bottom: 30px;">Parcours Scolaire</h2>
                 </div>
               </div>
 
-              <div class="education-timeline" data-aos="fade-left">
-                <div class="timeline-track">
-                  
-                  <div class="timeline-item">
-                    <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
-                    <div class="timeline-content">
-                      <div class="education-meta">
-                        <span class="year-range">2025 - Présent</span>
-                        <span class="degree-level">Études Supérieures</span>
-                      </div>
-                      <h4>BUT Réseaux et Télécommunications</h4>
-                      <p class="institution">IUT de Béthune</p>
-                      <p class="description">Apprentissage de l'administration système (Linux/Windows), du routage Cisco, de l'analyse de signaux et des bases de la cybersécurité.</p>
-                    </div>
+              <div class="education-timeline timeline-track" data-aos="fade-left">
+                <div class="timeline-item">
+                  <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
+                  <div class="timeline-content">
+                    <h4>BUT Réseaux et Télécommunications</h4>
+                    <p class="institution">IUT de Béthune</p>
+                    <span class="duration">2025 - Présent</span>
+                    <p class="description" style="color: var(--text-body);">Apprentissage de l'administration système (Linux/Windows), du routage Cisco, de l'analyse de signaux et des bases de la cybersécurité.</p>
                   </div>
+                </div>
 
-                  <div class="timeline-item">
-                    <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                    <div class="timeline-content">
-                      <div class="education-meta">
-                        <span class="year-range">Obtenu en 2025</span>
-                        <span class="degree-level">Lycée</span>
-                      </div>
-                      <h4>Baccalauréat Général (NSI / SI)</h4>
-                      <p class="institution">Lycée Sadi Carnot (Bruay-la-Buissière)</p>
-                      <p class="description">Spécialités Numérique et Sciences Informatiques (NSI) et Sciences de l'Ingénieur. Projets Python et Nuit du Code.</p>
-                    </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
+                  <div class="timeline-content">
+                    <h4>Baccalauréat Général (NSI / SI)</h4>
+                    <p class="institution">Lycée Sadi Carnot (Bruay-la-Buissière)</p>
+                    <span class="duration">Obtenu en 2025</span>
+                    <p class="description" style="color: var(--text-body);">Spécialités Numérique et Sciences Informatiques (NSI) et Sciences de l'Ingénieur. Projets Python et Nuit du Code.</p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -269,35 +246,35 @@
         <div class="row gy-4 justify-content-center">
           
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card exp-card text-center" style="padding: 40px 20px;">
-              <div class="icon-wrapper mb-4" style="margin: 0 auto; width: 80px; height: 80px; font-size: 36px; border-radius: 50%;">
+            <div class="portfolio-card exp-card">
+              <div class="icon-wrapper">
                 <i class="bi bi-diagram-3"></i>
               </div>
-              <h3 style="color: var(--accent-color);">1. Connecter</h3>
-              <p style="font-size: 14px; margin-bottom: 25px;">Connecter les entreprises et les usagers (Réseaux, Câblage, Signal).</p>
-              <a href="connecter.html" class="btn-cv-download">Voir les AC <i class="bi bi-arrow-right"></i></a>
+              <h3>1. Connecter</h3>
+              <p>Connecter les entreprises et les usagers (Réseaux, Câblage, Signal).</p>
+              <a href="connecter.html" class="btn-cv-download mt-auto">Voir les AC <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card exp-card text-center" style="padding: 40px 20px;">
-              <div class="icon-wrapper mb-4" style="margin: 0 auto; width: 80px; height: 80px; font-size: 36px; border-radius: 50%;">
+            <div class="portfolio-card exp-card">
+              <div class="icon-wrapper">
                 <i class="bi bi-server"></i>
               </div>
-              <h3 style="color: var(--accent-color);">2. Administrer</h3>
-              <p style="font-size: 14px; margin-bottom: 25px;">Administrer les réseaux et l'internet (Systèmes, Services, OS).</p>
-              <a href="administrer.html" class="btn-cv-download">Voir les AC <i class="bi bi-arrow-right"></i></a>
+              <h3>2. Administrer</h3>
+              <p>Administrer les réseaux et l'internet (Systèmes, Services, OS).</p>
+              <a href="administrer.html" class="btn-cv-download mt-auto">Voir les AC <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card exp-card text-center" style="padding: 40px 20px;">
-              <div class="icon-wrapper mb-4" style="margin: 0 auto; width: 80px; height: 80px; font-size: 36px; border-radius: 50%;">
+            <div class="portfolio-card exp-card">
+              <div class="icon-wrapper">
                 <i class="bi bi-code-square"></i>
               </div>
-              <h3 style="color: var(--accent-color);">3. Programmer</h3>
-              <p style="font-size: 14px; margin-bottom: 25px;">Créer des outils et applications (Dev, Scripts, Automatisation).</p>
-              <a href="programmer.html" class="btn-cv-download">Voir les AC <i class="bi bi-arrow-right"></i></a>
+              <h3>3. Programmer</h3>
+              <p>Créer des outils et applications (Dev, Scripts, Automatisation).</p>
+              <a href="programmer.html" class="btn-cv-download mt-auto">Voir les AC <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -315,61 +292,61 @@
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="exp-card h-100">
-              <div class="card-header">
-                <div class="company-logo"><i class="bi bi-hdd-network"></i></div>
-                <h3 class="mt-3">Réseaux</h3>
+            <div class="exp-card h-100 d-flex flex-column">
+              <div class="card-header" style="border-bottom: 1px solid var(--border-light); padding-bottom: 15px; margin-bottom: 20px;">
+                <div class="company-logo" style="margin-bottom: 15px;"><i class="bi bi-hdd-network"></i></div>
+                <h3 style="color: #fff; margin: 0;">Réseaux</h3>
               </div>
-              <div class="card-body">
+              <div class="card-body flex-grow-1">
                 <ul class="list-unstyled tech-list">
-                  <li><i class="bi bi-chevron-right"></i><strong> Commutation :</strong> VLANs, STP, 802.1Q.</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Routage :</strong> Statique, RIP, Inter-VLAN.</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Services :</strong> DHCP, DNS, NAT/PAT.</li>
+                  <li><strong>Commutation :</strong> VLANs, STP, 802.1Q.</li>
+                  <li><strong>Routage :</strong> Statique, RIP, Inter-VLAN.</li>
+                  <li><strong>Services :</strong> DHCP, DNS, NAT/PAT.</li>
                 </ul>
-                <div class="skills-tags mt-4">
-                  <span class="skill-tag">Cisco IOS</span>
-                  <span class="skill-tag">Packet Tracer</span>
-                </div>
+              </div>
+              <div class="skills-tags mt-4">
+                <span class="skill-tag">Cisco IOS</span>
+                <span class="skill-tag">Packet Tracer</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="exp-card h-100">
-              <div class="card-header">
-                <div class="company-logo"><i class="bi bi-terminal-dash"></i></div>
-                <h3 class="mt-3">Systèmes</h3>
+            <div class="exp-card h-100 d-flex flex-column">
+              <div class="card-header" style="border-bottom: 1px solid var(--border-light); padding-bottom: 15px; margin-bottom: 20px;">
+                <div class="company-logo" style="margin-bottom: 15px;"><i class="bi bi-terminal-dash"></i></div>
+                <h3 style="color: #fff; margin: 0;">Systèmes</h3>
               </div>
-              <div class="card-body">
+              <div class="card-body flex-grow-1">
                 <ul class="list-unstyled tech-list">
-                  <li><i class="bi bi-chevron-right"></i><strong> Linux :</strong> Administration Debian/Ubuntu.</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Virtualisation :</strong> VMware, VirtualBox.</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Hardware :</strong> Montage PC, diagnostic.</li>
+                  <li><strong>Linux :</strong> Administration Debian/Ubuntu.</li>
+                  <li><strong>Virtualisation :</strong> VMware, VirtualBox.</li>
+                  <li><strong>Hardware :</strong> Montage PC, diagnostic.</li>
                 </ul>
-                <div class="skills-tags mt-4">
-                  <span class="skill-tag">Bash</span>
-                  <span class="skill-tag">Windows OS</span>
-                </div>
+              </div>
+              <div class="skills-tags mt-4">
+                <span class="skill-tag">Bash</span>
+                <span class="skill-tag">Windows OS</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="exp-card h-100">
-              <div class="card-header">
-                <div class="company-logo"><i class="bi bi-lightning-charge"></i></div>
-                <h3 class="mt-3">Soft Skills & Autres</h3>
+            <div class="exp-card h-100 d-flex flex-column">
+              <div class="card-header" style="border-bottom: 1px solid var(--border-light); padding-bottom: 15px; margin-bottom: 20px;">
+                <div class="company-logo" style="margin-bottom: 15px;"><i class="bi bi-lightning-charge"></i></div>
+                <h3 style="color: #fff; margin: 0;">Soft Skills & Autres</h3>
               </div>
-              <div class="card-body">
+              <div class="card-body flex-grow-1">
                 <ul class="list-unstyled tech-list">
-                  <li><i class="bi bi-chevron-right"></i><strong> Programmation :</strong> Python (Scripts).</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Rigueur :</strong> Sport (Musculation 4x/sem).</li>
-                  <li><i class="bi bi-chevron-right"></i><strong> Persévérance :</strong> Musique (Guitare 8 ans).</li>
+                  <li><strong>Programmation :</strong> Python (Scripts).</li>
+                  <li><strong>Rigueur :</strong> Sport (Musculation 4x/sem).</li>
+                  <li><strong>Persévérance :</strong> Musique (Guitare 8 ans).</li>
                 </ul>
-                <div class="skills-tags mt-4">
-                  <span class="skill-tag">Autonomie</span>
-                  <span class="skill-tag">Logique</span>
-                </div>
+              </div>
+              <div class="skills-tags mt-4">
+                <span class="skill-tag">Autonomie</span>
+                <span class="skill-tag">Logique</span>
               </div>
             </div>
           </div>
@@ -387,7 +364,7 @@
     </section>
   </main>
 
-<footer class="footer text-center">
+  <footer class="footer text-center">
     <div class="container">
       <span class="sitename">Eliott.Sys</span>
       <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">
@@ -410,7 +387,6 @@
   
   <script src="assets/js/main.js"></script>
   <script>
-    // Sécurité supplémentaire au cas où le main.js échoue
     document.addEventListener("DOMContentLoaded", () => {
       if(typeof AOS !== 'undefined') {
         AOS.init({ duration: 800, once: true });
