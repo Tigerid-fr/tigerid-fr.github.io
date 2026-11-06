@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sécuriser les systèmes et réseaux — Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="tech-grid-bg"></div>
+
+  <header id="header" class="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <h1>Eliott<span>.net</span></h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Accueil</a></li>
+          <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 100px;">
+    <section class="section">
+      <div class="container section-title">
+        <span class="subtitle" style="color: #34d399; background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.3);">Parcours Cybersécurité — Niveau 2</span>
+        <h2>Sécuriser un système d'information</h2>
+        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et opérationnelle sur le durcissement des systèmes, le cloisonnement des réseaux, l'application des recommandations ANSSI et la gestion des accès.</p>
+      </div>
+
+      <div class="container">
+        <div class="timeline-track">
+
+          <!-- AC24.01 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-shield-check"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.01 // Durcissement & Configuration Sécurisée</span>
+              <h4>Appliquer les politiques de sécurité et durcir les systèmes d'exploitation</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Application de guides de durcissement (hardening) sur serveurs Linux, désactivation des services superflus, configuration stricte du démon SSH (interdiction root, clés publiques) et filtrage pare-feu UFW/iptables.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour réduire drastiquement la surface d'attaque des serveurs exposés et prévenir toute tentative d'élévation de privilèges.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En suivant les recommandations de l'ANSSI et les CIS Benchmarks, puis en validant l'état des ports par des scans de vulnérabilités locaux (Nmap).</li>
+                    <li><strong>Mes difficultés :</strong> Ne pas bloquer par mégarde les accès d'administration distants lors de la mise en place des règles de filtrage strictes.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le durcissement d'un système est un équilibre permanent entre niveau de sécurité requis et accessibilité opérationnelle des services.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Valider les scripts de hardening sur des environnements de test isolés avant application en production.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2401.jpg" alt="Hardening Linux" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.01'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Rapport d'Audit UFW & Configuration SSHD]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC24.02 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-lock"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.02 // Cloisonnement Réseau & Firewalling</span>
+              <h4>Concevoir et mettre en œuvre le cloisonnement d'un réseau sécurisé (DMZ)</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Mise en place d'architectures réseau segmentées avec isolation des zones sensibles, création de DMZ pour les serveurs Web publics et filtrage inter-VLAN par pare-feu applicatif.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour confiner une compromission éventuelle et empêcher un attaquant de progresser latéralement au sein du système d'information.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Définition de zones de sécurité (Inside, Outside, DMZ) sur routeurs et pare-feu, application de règles de NAT et vérification par tests de pénétration internes.</li>
+                    <li><strong>Mes difficultés :</strong> Paramétrer correctement les règles de rebond et de NAT pour que les utilisateurs internes accèdent aux services de la DMZ sans faille.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le principe de défense en profondeur exige que chaque zone réseau soit strictement isolée et contrôlée.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une matrice de flux détaillée validant l'origine, la destination et les ports autorisés pour chaque service.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2402.jpg" alt="Cloisonnement DMZ" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.02'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Topologie de Segmentation & Règles Pare-feu]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <span class="sitename">Eliott<span>.net</span></span>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO CYBER SÉCURISER</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
