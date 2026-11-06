@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Connecter les entreprises et les usagers — Eliott.Sys</title>
+  <title>Compétence Connecter — Eliott Panier</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -42,19 +42,19 @@
       <div class="container section-title">
         <span class="subtitle">Bloc de Compétences 2</span>
         <h2>Connecter les entreprises et les usagers</h2>
-        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur l'analyse approfondie des signaux, le déploiement de transmissions complexes et la mise en place d'accès distants sécurisés.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur la théorie et la mesure des signaux, le déploiement de supports de transmission, les réseaux d'accès opérateurs et l'interconnexion sécurisée.</p>
       </div>
 
       <!-- Sélecteur de Niveau -->
       <div class="container">
         <div class="level-switcher">
-          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - S3/S4)</button>
-          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - S1/S2)</button>
+          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - Maîtriser les composantes de connexion)</button>
+          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - Découvrir les transmissions et la ToIP)</button>
         </div>
       </div>
 
       <!-- ========================================================
-           CONTENU NIVEAU 2 (BUT 2 - PROGRAMME OFFICIEL R&T)
+           CONTENU NIVEAU 2 (BUT 2 - 5 AC OFFICIELS)
       ======================================================== -->
       <div id="level-2" class="container level-tab-content active">
         <div class="timeline-track">
@@ -63,16 +63,16 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-activity"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC22.01 // Transmissions Complexes & Analyse Spectrale</span>
+              <span class="year-range">AC22.01 // Niveau 2</span>
               <h4>Déployer et caractériser des systèmes de transmissions complexes</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Analyse sur banc de mesure et analyseur de spectre de signaux modulés (ASK, FSK, PSK), et caractérisation de liaisons optiques monomodes/multimodes (calculs d'affaiblissement).</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser la propagation des signaux hertziens et optiques haut débit dans les réseaux de télécommunications modernes.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Manipulation d'analyseurs de spectre, calculs de bilans de liaison en décibels (dBm / dBi) et exploitation des diagrammes de l'œil.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Analyse sur banc de mesure et analyseur de spectre de signaux modulés (ASK, FSK, PSK, QAM), et caractérisation de liaisons optiques monomodes/multimodes avec calculs d'affaiblissement linéique.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser la propagation des signaux hertziens et optiques haut débit dans les infrastructures de télécommunications modernes.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Manipulation d'analyseurs de spectre, calculs de bilans de liaison en décibels (dBm/dBi), exploitation des diagrammes de l'œil et simulation de canaux bruités sous Scilab/Python.</li>
                     <li><strong>Mes difficultés :</strong> Isoler le bruit thermique ambiant lors des mesures de sensibilité sur les canaux de transmission hertziens.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La compréhension fine de la couche physique et des modulations est indispensable pour anticiper les erreurs de transmission de données.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La compréhension fine de la couche physique et des constellations de modulation est indispensable pour anticiper le taux d'erreur binaire (BER).</li>
                     <li><strong>Ce que je ferais autrement :</strong> Étalonner rigoureusement les sondes de l'analyseur avant chaque série de mesures expérimentales.</li>
                   </ul>
                 </div>
@@ -80,7 +80,7 @@
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2201.jpg" alt="Analyse Spectre" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.01'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Analyseur de Spectre / Diagramme]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Analyseur de Spectre / Constellation]</span>
                   </div>
                 </div>
               </div>
@@ -91,24 +91,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-shield-lock"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC22.02 // Accès Distant & VPN</span>
+              <span class="year-range">AC22.02 // Niveau 2</span>
               <h4>Mettre en place un accès distant sécurisé</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Configuration de tunnels VPN IPsec site-à-site et d'accès nomades chiffrés pour interconnecter des sites distants de manière sécurisée.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour garantir la confidentialité et l'intégrité des flux d'entreprise traversant des réseaux publics non de confiance.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des phases IKEv1/IKEv2, choix des algorithmes cryptographiques (AES-256, SHA-256) et validation des flux par Wireshark.</li>
-                    <li><strong>Mes difficultés :</strong> Synchroniser les propositions de chiffrement et les politiques de sécurité (Crypto ACL) entre des routeurs de marques différentes.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Un tunnel VPN robuste repose sur une rigueur mathématique dans le choix des clés et des protocoles d'échange.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une spécification technique détaillée des paramètres cryptographiques avant l'implémentation.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Configuration de tunnels VPN IPsec site-à-site et d'accès nomades chiffrés (OpenVPN / IPsec IKEv2) pour interconnecter des sites distants de manière sécurisée.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour garantir la confidentialité, l'authenticité et l'intégrité des flux d'entreprise traversant des réseaux publics non de confiance.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des phases IKEv1/IKEv2 (Crypto ISAKMP / IPsec Transform-Set), sélection d'algorithmes robustes (AES-256, SHA-256, Diffie-Hellman Group 14) et validation des flux par Wireshark (paquets ESP).</li>
+                    <li><strong>Mes difficultés :</strong> Synchroniser les propositions de chiffrement et les listes d'accès de trafic intéressant (Crypto ACL) entre des routeurs aux topologies asymétriques.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un tunnel VPN robuste repose sur une rigueur absolue dans la concordance des paramètres cryptographiques des deux extrémités.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une spécification technique détaillée des propositions IKE/IPsec avant toute phase d'implémentation.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2202.jpg" alt="VPN IPsec" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.02'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[État IPsec SA & Capture Wireshark]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[État IPsec SA & Capture Wireshark ESP]</span>
                   </div>
                 </div>
               </div>
@@ -119,24 +119,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-diagram-3"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC22.03 // Interconnexion Multi-sites</span>
-              <h4>Mettre en place une connexion multi-sites via un réseau opérateur</h4>
+              <span class="year-range">AC22.03 // Niveau 2</span>
+              <h4>Mettre en place une connexion multi-site via un réseau opérateur</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Simulation et configuration de liaisons inter-sites à travers une architecture opérateur (technologies VLAN de niveau 2, MPLS et liaisons dédiées).</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour relier des agences géographiquement distantes au siège social en garantissant des niveaux de service (QoS) adaptés.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Configuration de sous-interfaces de routage et application de politiques de marquage des paquets sur les équipements de périphérie WAN.</li>
-                    <li><strong>Mes difficultés :</strong> Valider le comportement du routage dynamique à travers la topologie de transport de l'opérateur simulé.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> L'interconnexion multi-sites nécessite une coordination stricte entre les plans d'adressage internes et les services loués.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Simuler des scénarios de coupure de lien principal pour tester le basculement automatique sur la liaison de secours.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Simulation et configuration de liaisons inter-sites à travers une architecture opérateur (VLANs de niveau 2 802.1Q/QinQ, VRF et liaisons dédiées).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour relier des agences géographiquement dispersées au siège social tout en garantissant l'isolation des flux et le respect des SLAs.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Configuration de sous-interfaces de routage WAN, mise en place de tables de routage virtuelles (VRF-Lite) et marquage de priorités sur les commutateurs de bordure.</li>
+                    <li><strong>Mes difficultés :</strong> Valider le comportement du routage dynamique et de la redistribution de routes à travers le nuage opérateur simulé.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'interconnexion multi-sites nécessite une coordination stricte entre les plans d'adressage internes et les interfaces d'acheminement opérateur.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Simuler des scénarios de coupure de lien principal pour valider le basculement automatique sur un lien de secours 4G/5G.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2203.jpg" alt="Multi-sites" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.03'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie WAN Multi-sites GNS3]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie WAN Multi-sites & Tables VRF]</span>
                   </div>
                 </div>
               </div>
@@ -145,26 +145,26 @@
 
           <!-- AC22.04 -->
           <div class="timeline-item">
-            <div class="timeline-marker"><i class="bi bi-telephone"></i></div>
+            <div class="timeline-marker"><i class="bi bi-broadcast-pin"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC22.04 // Téléphonie IP Avancée & ToIP</span>
-              <h4>Déployer des serveurs de ToIP et gérer les flux convergents</h4>
+              <span class="year-range">AC22.04 // Niveau 2</span>
+              <h4>Déployer des réseaux d'accès des opérateurs</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Installation et configuration d'un IPBX (Asterisk / serveur SIP), enregistrement de postes téléphoniques IP et mise en place de files d'attente et règles de numérotation.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser le déploiement de la voix sur IP et la convergence des flux multimédias sur une infrastructure IP unifiée.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des fichiers de conf SIP (`sip.conf`, `extensions.conf`), gestion des codecs audio et priorisation des paquets voix (QoS / DiffServ).</li>
-                    <li><strong>Mes difficultés :</strong> Résoudre les problèmes de NAT et de rebond audio (one-way audio) lors des appels traversant des pare-feux.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La ToIP est extrêmement sensible aux délais et à la gigue ; la mise en place d'une politique de QoS rigoureuse est non négociable.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Documenter précisément les plans de numérotation et tester systématiquement les codecs pris en charge.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Étude et maquettage des technologies de boucle locale fixe et mobile (FTTH PON/GPON, architectures cellulaires 4G/5G et modulations radio d'accès).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour comprendre le fonctionnement du dernier kilomètre qui relie le client final au cœur de réseau des fournisseurs d'accès.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Calcul de budgets optiques sur arbres de dérivation GPON (splitters), analyse des trames de signalisation et configuration d'émulateurs d'accès WAN.</li>
+                    <li><strong>Mes difficultés :</strong> Calculer précisément l'impact des pertes d'insertion cumulées des coupleurs optiques sur la portée maximale de la liaison FTTH.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le déploiement du réseau d'accès est dicté par des contraintes physiques et économiques strictes de partage de bande passante.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un tableau comparatif détaillé des bilans de puissance selon différents ratios de couplage optique.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2204.jpg" alt="ToIP Asterisk" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.04'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Console Asterisk / Enregistrement SIP]</span>
+                    <img src="assets/img/trace-ac2204.jpg" alt="Réseaux d'Accès" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Schéma Arbre GPON & Bilan Optique]</span>
                   </div>
                 </div>
               </div>
@@ -175,24 +175,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-file-earmark-text"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC22.05 // Cahier des Charges & Analyse R&T</span>
-              <h4>Capacité à questionner un cahier des charges R&T et dimensionner une solution</h4>
+              <span class="year-range">AC22.05 // Niveau 2</span>
+              <h4>Capacité à questionner un cahier des charges RT</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Analyse critique d'un cahier des charges client pour un projet d'infrastructure, estimation des besoins en bande passante et choix argumenté des équipements de raccordement.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour apprendre à traduire un besoin métier exprimé par un client en spécifications techniques réalisables et budgétisées.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Rédaction de dossiers d'architecture technique (DAT), chiffrage prévisionnel et confrontation des contraintes budgétaires aux exigences de performance.</li>
-                    <li><strong>Mes difficultés :</strong> Anticiper la croissance future du trafic pour éviter le sous-dimensionnement des liens WAN proposés.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Un bon ingénieur réseau doit savoir écouter le client, décoder les zones d'ombre d'un cahier des charges et proposer une solution évolutive.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Intégrer des clauses de réversibilité et de tolérance de charge explicites dès la phase de rédaction.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Analyse critique d'un cahier des charges client lors d'une SAÉ, identification des ambiguïtés techniques, estimation des besoins réels en débit/latence et proposition d'une solution d'interconnexion dimensionnée.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour apprendre à confronter les besoins exprimés par un utilisateur non technicien aux réalités physiques et budgétaires des télécoms.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Rédaction de questions de cadrage, calcul des débits crêtes/moyens, formalisation d'une matrice de conformité et soutenance des choix d'architecture.</li>
+                    <li><strong>Mes difficultés :</strong> Réussir à justifier le surcoût d'une liaison redondante et d'un SLA élevé face à un client focalisé sur le coût d'installation.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un bon professionnel R&T ne se contente pas d'exécuter un cahier des charges : il conseille, alerte sur les limites et anticipe les besoins futurs.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Proposer systématiquement deux variantes chiffrées (une variante nominale et une variante haute disponibilité) dès la première présentation.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2205.jpg" alt="Cahier des charges" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.05'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Dossier d'Architecture Technique]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Analyse Critique du Cahier des Charges]</span>
                   </div>
                 </div>
               </div>
@@ -203,11 +203,12 @@
       </div>
 
       <!-- ========================================================
-           CONTENU NIVEAU 1 (BUT 1 - S1/S2 - CONSERVÉ INTÉGRALEMENT)
+           CONTENU NIVEAU 1 (BUT 1 - 5 AC OFFICIELS CONSERVÉS)
       ======================================================== -->
       <div id="level-1" class="container level-tab-content">
         <div class="timeline-track">
 
+          <!-- AC12.01 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-activity"></i></div>
             <div class="timeline-content">
@@ -235,11 +236,12 @@
             </div>
           </div>
 
+          <!-- AC12.02 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-calculator"></i></div>
             <div class="timeline-content">
               <span class="year-range">AC12.02 // Transmissions</span>
-              <h4>Caractériser des systèmes de transmissions élémentaires</h4>
+              <h4>Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
@@ -262,6 +264,7 @@
             </div>
           </div>
 
+          <!-- AC12.03 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-ethernet"></i></div>
             <div class="timeline-content">
@@ -289,6 +292,7 @@
             </div>
           </div>
 
+          <!-- AC12.04 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-telephone"></i></div>
             <div class="timeline-content">
@@ -316,11 +320,12 @@
             </div>
           </div>
 
+          <!-- AC12.05 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-chat-left-quote"></i></div>
             <div class="timeline-content">
               <span class="year-range">AC12.05 // Communication Professionnelle</span>
-              <h4>Communiquer avec un tiers et adapter son discours</h4>
+              <h4>Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
