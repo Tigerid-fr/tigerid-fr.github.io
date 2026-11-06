@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> Programmer - Eliott.Sys</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Programmer des outils R&T — Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .level-tab-content { display: none; }
+    .level-tab-content.active { display: block; }
+    .level-switcher { display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .level-btn { background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.3); color: #cbd5e1; padding: 10px 24px; border-radius: 8px; font-family: var(--font-code); font-weight: 600; cursor: pointer; transition: var(--speed-fast); }
+    .level-btn.active, .level-btn:hover { background: var(--gradient-main); color: #fff; border-color: transparent; box-shadow: 0 0 18px rgba(139, 92, 246, 0.45); }
+    .trace-box { background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light); }
+  </style>
 </head>
 <body>
 
-  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
+  <div class="tech-grid-bg"></div>
 
   <header id="header" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
-        <h1>Eliott.Sys</h1>
+        <h1>Eliott<span>.net</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Initialisation</a></li>
+          <li><a href="index.html#hero">Accueil</a></li>
           <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -31,12 +40,172 @@
   <main class="main" style="padding-top: 100px;">
     <section class="section">
       <div class="container section-title">
-        <span class="subtitle">Bloc de Compétences 3 // Niveau 1</span>
+        <span class="subtitle">Bloc de Compétences 3</span>
         <h2>Créer des outils et applications informatiques pour les R&T</h2>
-        <p style="max-width: 600px; color: var(--text-body);">Démarche réflexive sur le développement de scripts d'automatisation, la gestion de bases de données et le déploiement d'interfaces Web.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur le développement de scripts d'automatisation avancés, la création d'applications Web connectées à des bases de données et la gestion de projets collaboratifs.</p>
       </div>
 
+      <!-- Sélecteur de Niveau -->
       <div class="container">
+        <div class="level-switcher">
+          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - S3/S4)</button>
+          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - S1/S2)</button>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 2 (BUT 2 - PROGRAMME OFFICIEL R&T)
+      ======================================================== -->
+      <div id="level-2" class="container level-tab-content active">
+        <div class="timeline-track">
+
+          <!-- AC23.01 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-filetype-py"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC23.01 // Automatisation & Scripting Système</span>
+              <h4>Automatiser l'administration système avec des scripts</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Développement de scripts en Python et Bash pour automatiser le déploiement de configurations, la sauvegarde de fichiers de journaux et la supervision d'hôtes réseau.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour s'affranchir des manipulations manuelles répétitives et garantir une réactivité immédiate face aux incidents d'infrastructure.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Utilisation de bibliothèques standard Python, de structures conditionnelles, de fonctions de journalisation et de boucles d'exécution planifiée (cron).</li>
+                    <li><strong>Mes difficultés :</strong> Gérer proprement les codes de retour d'erreurs et les exceptions lors d'appels SSH distants automatisés.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'automatisation fiabilise les processus d'exploitation et réduit considérablement l'erreur humaine en environnement de production.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Modulariser davantage le code sous forme de fonctions réutilisables dès le démarrage du script.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2301.jpg" alt="Script Python" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC23.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Script Python & Logs d'Exécution]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC23.02 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-code-slash"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC23.02 // Développement Web Applicatif</span>
+              <h4>Développer une application à partir d'un cahier des charges donné, pour le Web</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Conception et développement d'applications Web dynamiques (ex: portfolio dynamique, interfaces de gestion) basées sur le micro-framework Python Flask, HTML5/CSS3 et Bootstrap.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour proposer des interfaces de consultation et d'administration ergonomiques, connectées à des services dorsaux.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Structuration des routes Flask, templating avec Jinja2, gestion des sessions utilisateurs et design responsive orienté composants.</li>
+                    <li><strong>Mes difficultés :</strong> Maintenir une séparation claire et propre entre la logique métier du serveur et l'affichage des templates côté client.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le développement d'applications Web exige une structure rigoureuse des routes et des données pour garantir la maintenabilité.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Intégrer un système de tests unitaires (PyTest) pour valider les routes du serveur web avant le déploiement.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2302.jpg" alt="Application Flask" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC23.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Code Flask Routes & Interface Web]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC23.03 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-cpu"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC23.03 // Protocoles & Programmation Client/Serveur</span>
+              <h4>Utiliser un protocole réseau pour programmer une application client/serveur</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Développement de scripts de communication réseau basés sur les sockets TCP/IP en Python, implémentation de requêtes HTTP/API personnalisées et analyse des échanges applicatifs.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour comprendre concrètement la couche Application et le mécanisme d'encapsulation des données à travers les sockets bas niveau.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Utilisation des modules Python <code>socket</code> et <code>requests</code>, gestion des flux d'écoute sur des ports dédiés et sérialisation de données.</li>
+                    <li><strong>Mes difficultés :</strong> Gérer correctement la fermeture des sockets et le blocage des flux d'E/S en cas de perte de connexion du client.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Tout protocole réseau repose sur un automate d'états strict qu'il faut programmer fidèlement côté client et côté serveur.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Utiliser des threads ou de l'asynchrone pour permettre au serveur de traiter plusieurs connexions simultanées sans latence.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2303.jpg" alt="Sockets Python" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC23.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Script Sockets & Échanges Client/Serveur]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC23.04 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-database"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC23.04 // Gestion & Modélisation de Données</span>
+              <h4>Choisir les mécanismes de gestion de données adaptés et argumenter ses choix</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Conception de modèles conceptuels de données (MCD/MLD), création de bases de données relationnelles sous PostgreSQL / MySQL et écriture de requêtes SQL complexes.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assurer la persistance, l'intégrité et la rapidité d'accès aux informations manipulées par les applications et outils R&T.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Normalisation des tables, gestion des clés primaires/étrangères, indexation et connexion des scripts Python aux SGBD via des connecteurs adaptés.</li>
+                    <li><strong>Mes difficultés :</strong> Établir des relations de cardinalité complexes sans dupliquer l'information et optimiser les temps de réponse des requêtes de jointure.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Une base de données rigoureusement modélisée est le garant absolu de la fiabilité d'une application informatique.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Valider le modèle relationnel auprès de mes pairs avant d'injecter des volumes importants de données de test.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2304.jpg" alt="Base de données" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC23.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Schéma Relationnel SGBD & Requêtes SQL]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC23.05 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-git"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC23.05 // Environnement Collaboratif & Versioning</span>
+              <h4>Maintenir et sécuriser un environnement de travail collaboratif</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Utilisation avancée de Git et des plateformes GitLab/GitHub pour la gestion de versions, la fusion de branches (feature branching) et la résolution de conflits en équipe.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour sécuriser l'historique du code source, permettre le travail simultané sur un même projet et assurer la traçabilité des modifications.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Création de branches thématiques, commits descriptifs, pull requests et application de bonnes pratiques de versioning.</li>
+                    <li><strong>Mes difficultés :</strong> Résoudre des conflits de fusion complexes lors de modifications simultanées sur les mêmes lignes de code par deux développeurs.</li>
+                    <li><strong>Ce l'en ai appris :</strong> Le versioning est un filet de sécurité indispensable en programmation collaborative ; il discipline l'écriture du code.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Utiliser systématiquement des revues de code (Code Review) avant chaque fusion de branche principale.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2305.jpg" alt="Git Versioning" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC23.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Graphe de Branches Git & Merge Requests]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 1 (BUT 1 - S1/S2 - CONSERVÉ INTÉGRALEMENT)
+      ======================================================== -->
+      <div id="level-1" class="container level-tab-content">
         <div class="timeline-track">
 
           <div class="timeline-item">
@@ -56,10 +225,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1301.jpg" alt="Utilisation OS" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.01'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture CLI / Configuration Environnement]</span>
+                    <img src="assets/img/trace-ac1301.jpg" alt="Utilisation OS" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture CLI / Configuration Environnement]</span>
                   </div>
                 </div>
               </div>
@@ -83,10 +252,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1302.jpg" alt="Modif programme" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.02'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait Script Python Débogué]</span>
+                    <img src="assets/img/trace-ac1302.jpg" alt="Modif programme" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Script Python Débogué]</span>
                   </div>
                 </div>
               </div>
@@ -110,10 +279,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1303.jpg" alt="Algo" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.03'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Pseudo-Code vs Traduction Python]</span>
+                    <img src="assets/img/trace-ac1303.jpg" alt="Algo" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Pseudo-Code vs Traduction Python]</span>
                   </div>
                 </div>
               </div>
@@ -137,10 +306,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1304.jpg" alt="Site Web" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.04'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait HTML Structurel / Fichier CSS]</span>
+                    <img src="assets/img/trace-ac1304.jpg" alt="Site Web" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait HTML Structurel / Fichier CSS]</span>
                   </div>
                 </div>
               </div>
@@ -164,10 +333,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1305.jpg" alt="Gestion données" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.05'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Schéma Relationnel / Modèle MCD]</span>
+                    <img src="assets/img/trace-ac1305.jpg" alt="Gestion données" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Schéma Relationnel / Modèle MCD]</span>
                   </div>
                 </div>
               </div>
@@ -186,15 +355,15 @@
                     <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir des automatismes d'organisation collective et développer une régularité de travail essentielle aux projets d'envergure.</li>
                     <li><strong>Comment je l'ai fait :</strong> En synchronisant les tâches avec mes équipiers en SAÉ et en respectant scrupuleusement les cadences et consignes en entreprise.</li>
                     <li><strong>Mes difficultés :</strong> Ajuster la répartition du travail lorsque les niveaux d'implication ou les plannings des membres du groupe divergeaient.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Que la transparence et la communication régulière sont indispensables pour maintenir l'efficacité d'un collectif (équipe de dev ou brigade logistique).</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Que la transparence et la communication régulière sont indispensables pour maintenir l'efficacité d'un collectif.</li>
                     <li><strong>Ce que je ferais autrement :</strong> Mettre en place un outil de suivi de projet commun (Git / Kanban) dès le premier jour de la SAÉ pour éviter les doublons.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1306.jpg" alt="Collaboratif" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC13.06'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture Suivi de Projet / Badge Pro]</span>
+                    <img src="assets/img/trace-ac1306.jpg" alt="Collaboratif" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC13.06'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Suivi de Projet / Badge Pro]</span>
                   </div>
                 </div>
               </div>
@@ -203,15 +372,27 @@
 
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="footer text-center">
     <div class="container">
-      <span class="sitename">Eliott.Sys</span>
-      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO S2 BC3 // IUT DE BÉTHUNE</p>
+      <span class="sitename">Eliott<span>.net</span></span>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO BC3 // IUT DE BÉTHUNE</p>
     </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function switchLevel(tabId, btn) {
+      document.querySelectorAll('.level-tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
