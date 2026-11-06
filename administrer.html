@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Administrer - Eliott.Sys</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Administrer les réseaux et l'Internet — Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .level-tab-content { display: none; }
+    .level-tab-content.active { display: block; }
+    .level-switcher { display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .level-btn { background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.3); color: #cbd5e1; padding: 10px 24px; border-radius: 8px; font-family: var(--font-code); font-weight: 600; cursor: pointer; transition: var(--speed-fast); }
+    .level-btn.active, .level-btn:hover { background: var(--gradient-main); color: #fff; border-color: transparent; box-shadow: 0 0 18px rgba(139, 92, 246, 0.45); }
+    .trace-box { background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light); }
+  </style>
 </head>
 <body>
 
-  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
+  <div class="tech-grid-bg"></div>
 
   <header id="header" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
-        <h1>Eliott.Sys</h1>
+        <h1>Eliott<span>.net</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Initialisation</a></li>
+          <li><a href="index.html#hero">Accueil</a></li>
           <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -31,14 +40,203 @@
   <main class="main" style="padding-top: 100px;">
     <section class="section">
       <div class="container section-title">
-        <span class="subtitle">Bloc de Compétences 1 // Niveau 1</span>
+        <span class="subtitle">Bloc de Compétences 1</span>
         <h2>Administrer les réseaux et l’Internet</h2>
-        <p style="max-width: 600px; color: var(--text-body);">Démarche réflexive sur la gestion des infrastructures, des systèmes d'exploitation et la configuration des services réseaux de base.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur la gestion des infrastructures, des systèmes d'exploitation, le routage dynamique et les services réseaux avancés.</p>
       </div>
 
+      <!-- Sélecteur de Niveau -->
       <div class="container">
+        <div class="level-switcher">
+          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - S3/S4)</button>
+          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - S1/S2)</button>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 2 (BUT 2)
+      ======================================================== -->
+      <div id="level-2" class="container level-tab-content active">
         <div class="timeline-track">
 
+          <!-- AC21.01 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-router"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.01 // Routage Dynamique & Commutation Avancée</span>
+              <h4>Configurer et dépanner le routage dynamique dans un réseau multi-zones</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Déploiement et dépannage du protocole OSPF (single-area et multi-area), routage inter-VLAN sur switch L3 / routeur, agrégation de liens EtherChannel (LACP) et sécurisation STP (BPDU Guard).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assurer la convergence rapide et la redondance automatique des chemins réseau au sein d'une infrastructure d'entreprise distribuée.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Configuration en ligne de commande Cisco IOS et maquettage sous GNS3 / Packet Tracer en calculant les coûts de métrique et en inspectant les bases de données d'états de liens (LSDB).</li>
+                    <li><strong>Mes difficultés :</strong> Diagnostiquer une rupture de contiguïté OSPF causée par un décalage de masque de sous-réseau et de timers Hello/Dead sur un lien point-à-point.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le routage dynamique ne pardonne aucun écart de cohérence sur les paramètres d'interface ; la commande <code>show ip ospf neighbor</code> est le premier réflexe de diagnostic.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Toujours configurer explicitement les <code>router-id</code> via des adresses de bouclage (Loopback) pour fiabiliser l'élection DR/BDR.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2101.jpg" alt="Topologie OSPF" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Voisinage OSPF & Topologie GNS3]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC21.02 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-shield-lock"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.02 // Redondance & Sécurité Périmétrique</span>
+              <h4>Configurer une politique de QoS et les fonctions de base de sécurité réseau</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Implémentation du protocole de redondance de passerelle HSRP (avec tracking d'interface), configuration de listes de contrôle d'accès (ACL étendues) et sécurisation des ports commutateurs (Port-Security).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour éviter qu'une panne de passerelle n'interrompe le trafic client et filtrer les flux inter-VLAN selon le principe du moindre privilège.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Attribution de priorités HSRP avec préemption et application d'ACLs numérotées et nommées en entrée d'interfaces virtuelles (SVI).</li>
+                    <li><strong>Mes difficultés :</strong> Éviter de bloquer le trafic légitime en plaçant les ACLs étendues au bon endroit (au plus près de la source pour économiser la bande passante).</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La haute disponibilité réseau requiert une synchronisation parfaite entre les commutateurs actifs et de secours pour un basculement transparent.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Utiliser des ACLs nommées commentées pour faciliter l'audit ultérieur des règles de filtrage.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2102.jpg" alt="HSRP et ACL" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[État HSRP Active/Standby & Filtres ACL]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC21.03 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-boxes"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.03 // Virtualisation & Conteneurisation</span>
+              <h4>Déployer des solutions de virtualisation et des postes clients adaptés</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Déploiement et gestion de parcs virtualisés sous VMware ESXi, VirtualBox et isolation de micro-services au moyen de conteneurs Docker (avec Dockerfile et Docker Compose).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour rationaliser les ressources serveurs physiques et permettre un déploiement reproductible et isolé des environnements de test et de production.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Création de ponts réseaux virtuels (vSwitch / bridge Docker), allocation raisonnée de vCPU/RAM et rédaction de scripts <code>docker-compose.yml</code>.</li>
+                    <li><strong>Mes difficultés :</strong> Configurer le routage et le port mapping entre l'hôte physique et les conteneurs Docker sur des sous-réseaux isolés.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La conteneurisation offre une agilité incomparable par rapport à la virtualisation lourde, à condition de maîtriser les volumes persistants.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Toujours déclarer des réseaux internes Docker spécifiques plutôt que d'utiliser le réseau bridge par défaut.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2103.jpg" alt="Docker Compose" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Fichier Docker-Compose & Conteneurs Actifs]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC21.04 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-hdd-stack"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.04 // Services Réseaux d'Infrastructure</span>
+              <h4>Déployer des services réseaux avancés (DNS Bind9, Web Apache, Messagerie Postfix)</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Installation et configuration complète d'un serveur DNS faisant autorité (Bind9 avec zones directes/inverses), d'un serveur Web Apache2 (VirtualHosts multiples avec redirection HTTPS) et d'un serveur de messagerie SMTP/IMAP (Postfix / Dovecot).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour fournir le socle de services applicatifs indispensable au bon fonctionnement d'un réseau d'entreprise indépendant.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Écriture des fichiers de zone dans <code>/etc/bind/</code>, configuration des hôtes virtuels dans <code>/etc/apache2/sites-available/</code> et vérification des flux avec <code>dig</code>, <code>curl -I</code> et logs mail.</li>
+                    <li><strong>Mes difficultés :</strong> Gérer les erreurs de délégation DNS et la concordance stricte entre les enregistrements PTR (reverse) et MX pour la distribution des courriels.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'administration de services Linux repose sur une rigueur syntaxique absolue ; une simple virgule manquante dans un fichier Bind9 neutralise tout le service.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Utiliser systématiquement l'outil de validation <code>named-checkzone</code> avant d'exécuter un <code>systemctl reload bind9</code>.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2104.jpg" alt="Bind9 Apache" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Fichier de Zone Bind9 & Requête Dig Résolue]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC21.05 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-globe"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.05 // Architecture WAN & Opérateurs</span>
+              <h4>Identifier les réseaux opérateurs et l'architecture globale d'Internet</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Étude et simulation de protocoles de routage inter-domaines (BGP / eBGP), modélisation de Systèmes Autonomes (AS) et analyse des technologies de transport opérateur (MPLS, liaisons louées).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour appréhender comment les réseaux privés d'entreprise s'interconnectent à l'échelle planétaire via le cœur de réseau Internet.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Établissement de sessions de peering BGP sous GNS3 et traçage de paquets transcontinentaux via les outils Looking Glass et traceroute ASN.</li>
+                    <li><strong>Mes difficultés :</strong> Comprendre la hiérarchie des attributs de sélection BGP (Weight, Local Preference, AS-Path) pour influencer le choix de la route de sortie.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Internet n'est pas un bloc homogène mais une fédération d'accords techniques et commerciaux régis par des politiques BGP strictes.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Schématiser clairement les numéros d'AS et les relations client/fournisseur avant de débuter l'injection de préfixes réseau.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2105.jpg" alt="Session BGP" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Table BGP & Topologie Multi-AS GNS3]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC21.06 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-people-fill"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC21.06 // Professionnalisation & Travail d'Équipe</span>
+              <h4>Travailler en équipe pour développer ses compétences professionnelles</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Réalisation de projets d'infrastructure réseau en équipe lors des SAÉ du S3, répartition des rôles (responsable routage, responsable services Linux, rédacteur documentation) et revues régulières.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour simuler les conditions opérationnelles d'une équipe d'exploitation réseau (NOC) où l'interdépendance technique est totale.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Utilisation d'un tableau Kanban, partage de maquettes de configurations via Git et réunions de synchronisation au début de chaque séance de TP.</li>
+                    <li><strong>Mes difficultés :</strong> Coordonner l'interconnexion entre la partie routage de mon binôme et mes serveurs de services sans bloquer son avancement.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Une communication technique claire et le respect des normes d'adressage définies en commun préviennent 90 % des blocages en équipe.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un document d'architecture technique (DAT) commun dès la première heure de projet pour figer les interfaces.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2106.jpg" alt="Suivi Projet Equipe" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.06'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Tableau Kanban & Revue d'Architecture SAÉ]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 1 (BUT 1 - S1/S2 - CONSERVÉ INTÉGRALEMENT)
+      ======================================================== -->
+      <div id="level-1" class="container level-tab-content">
+        <div class="timeline-track">
+
+          <!-- AC11.01 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-lightning-charge"></i></div>
             <div class="timeline-content">
@@ -56,16 +254,17 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1101.jpg" alt="Lois électricité" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.01'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Schéma de circuit / Mesures R1.04]</span>
+                    <img src="assets/img/trace-ac1101.jpg" alt="Lois électricité" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Schéma de circuit / Mesures R1.04]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AC11.02 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-diagram-3"></i></div>
             <div class="timeline-content">
@@ -83,16 +282,17 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1102.jpg" alt="Codage information" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.02'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Tableau d'encapsulation / Trame réseau]</span>
+                    <img src="assets/img/trace-ac1102.jpg" alt="Codage information" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Tableau d'encapsulation / Trame réseau]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AC11.03 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-gear-fill"></i></div>
             <div class="timeline-content">
@@ -110,16 +310,17 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1103.jpg" alt="Configuration LAN" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.03'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Topologie Packet Tracer annotée]</span>
+                    <img src="assets/img/trace-ac1103.jpg" alt="Configuration LAN" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie Packet Tracer annotée]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AC11.04 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-terminal"></i></div>
             <div class="timeline-content">
@@ -137,16 +338,17 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1104.jpg" alt="Systèmes OS" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.04'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture CLI Linux / Gestion Processus]</span>
+                    <img src="assets/img/trace-ac1104.jpg" alt="Systèmes OS" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture CLI Linux / Gestion Processus]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AC11.05 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-exclamation-triangle"></i></div>
             <div class="timeline-content">
@@ -157,23 +359,24 @@
                   <ul class="list-unstyled tech-list">
                     <li><strong>Ce que j'ai fait :</strong> J'ai analysé des pannes réseau simulées, tracé des coupures de liens et rédigé des rapports d'incidents clairs.</li>
                     <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes méthodologiques d'un technicien support capable d'isoler un problème sur la couche physique ou logique.</li>
-                    <li><strong>Comment je l'ai fait :</strong> En utilisant les outils de diagnostic ICMP classiques (`ping`, `traceroute`, `nslookup`) et en inspectant les logs d'erreurs en TP.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En utilisant les outils de diagnostic ICMP classiques (<code>ping</code>, <code>traceroute</code>, <code>nslookup</code>) et en inspectant les logs d'erreurs en TP.</li>
                     <li><strong>Mes difficultés :</strong> Distinguer rapidement si l'origine d'un problème de résolution de nom venait d'un mauvais adressage client ou d'une panne du serveur DNS local.</li>
                     <li><strong>Ce que j'en ai appris :</strong> Qu'un bon diagnostic doit suivre scrupuleusement l'ordre des couches du modèle OSI (du physique vers l'application) pour faire gagner du temps à l'équipe.</li>
                     <li><strong>Ce que je ferais autrement :</strong> Structurer mes rapports d'anomalies de manière plus standardisée en utilisant des fiches d'incidents types.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1105.jpg" alt="Diagnostic" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.05'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Résultats Commandes Ping & Traceroute]</span>
+                    <img src="assets/img/trace-ac1105.jpg" alt="Diagnostic" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Résultats Commandes Ping & Traceroute]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AC11.06 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
             <div class="timeline-content">
@@ -191,10 +394,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1106.jpg" alt="Procédure client" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC11.06'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait de Procédure Technique Rédigée]</span>
+                    <img src="assets/img/trace-ac1106.jpg" alt="Procédure client" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC11.06'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait de Procédure Technique Rédigée]</span>
                   </div>
                 </div>
               </div>
@@ -203,15 +406,27 @@
 
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="footer text-center">
     <div class="container">
-      <span class="sitename">Eliott.Sys</span>
-      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO S2 BC1 // IUT DE BÉTHUNE</p>
+      <span class="sitename">Eliott<span>.net</span></span>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO BC1 // IUT DE BÉTHUNE</p>
     </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function switchLevel(tabId, btn) {
+      document.querySelectorAll('.level-tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
