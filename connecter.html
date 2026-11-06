@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> Connecter - Eliott.Sys</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Mulish:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Connecter les entreprises et les usagers — Eliott.Sys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .level-tab-content { display: none; }
+    .level-tab-content.active { display: block; }
+    .level-switcher { display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .level-btn { background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.3); color: #cbd5e1; padding: 10px 24px; border-radius: 8px; font-family: var(--font-code); font-weight: 600; cursor: pointer; transition: var(--speed-fast); }
+    .level-btn.active, .level-btn:hover { background: var(--gradient-main); color: #fff; border-color: transparent; box-shadow: 0 0 18px rgba(139, 92, 246, 0.45); }
+    .trace-box { background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light); }
+  </style>
 </head>
 <body>
 
-  <div class="tech-grid-bg" style="position: fixed; inset: 0; z-index: -2;"></div>
+  <div class="tech-grid-bg"></div>
 
   <header id="header" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <i class="bi bi-hdd-network tech-logo-icon"></i>
-        <h1>Eliott.Sys</h1>
+        <h1>Eliott<span>.net</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Initialisation</a></li>
+          <li><a href="index.html#hero">Accueil</a></li>
           <li><a href="index.html#portfolio" class="active">Retour Matrice</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -31,12 +40,172 @@
   <main class="main" style="padding-top: 100px;">
     <section class="section">
       <div class="container section-title">
-        <span class="subtitle">Bloc de Compétences 2 // Niveau 1</span>
+        <span class="subtitle">Bloc de Compétences 2</span>
         <h2>Connecter les entreprises et les usagers</h2>
-        <p style="max-width: 600px; color: var(--text-body);">Démarche réflexive sur l'analyse physique des signaux, le déploiement des supports de transmission et la mise en œuvre de la téléphonie IP.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur l'analyse approfondie des signaux, le déploiement de transmissions complexes et la mise en place d'accès distants sécurisés.</p>
       </div>
 
+      <!-- Sélecteur de Niveau -->
       <div class="container">
+        <div class="level-switcher">
+          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - S3/S4)</button>
+          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - S1/S2)</button>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 2 (BUT 2 - PROGRAMME OFFICIEL R&T)
+      ======================================================== -->
+      <div id="level-2" class="container level-tab-content active">
+        <div class="timeline-track">
+
+          <!-- AC22.01 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-activity"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC22.01 // Transmissions Complexes & Analyse Spectrale</span>
+              <h4>Déployer et caractériser des systèmes de transmissions complexes</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Analyse sur banc de mesure et analyseur de spectre de signaux modulés (ASK, FSK, PSK), et caractérisation de liaisons optiques monomodes/multimodes (calculs d'affaiblissement).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser la propagation des signaux hertziens et optiques haut débit dans les réseaux de télécommunications modernes.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Manipulation d'analyseurs de spectre, calculs de bilans de liaison en décibels (dBm / dBi) et exploitation des diagrammes de l'œil.</li>
+                    <li><strong>Mes difficultés :</strong> Isoler le bruit thermique ambiant lors des mesures de sensibilité sur les canaux de transmission hertziens.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La compréhension fine de la couche physique et des modulations est indispensable pour anticiper les erreurs de transmission de données.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Étalonner rigoureusement les sondes de l'analyseur avant chaque série de mesures expérimentales.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2201.jpg" alt="Analyse Spectre" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Analyseur de Spectre / Diagramme]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC22.02 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-shield-lock"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC22.02 // Accès Distant & VPN</span>
+              <h4>Mettre en place un accès distant sécurisé</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Configuration de tunnels VPN IPsec site-à-site et d'accès nomades chiffrés pour interconnecter des sites distants de manière sécurisée.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour garantir la confidentialité et l'intégrité des flux d'entreprise traversant des réseaux publics non de confiance.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des phases IKEv1/IKEv2, choix des algorithmes cryptographiques (AES-256, SHA-256) et validation des flux par Wireshark.</li>
+                    <li><strong>Mes difficultés :</strong> Synchroniser les propositions de chiffrement et les politiques de sécurité (Crypto ACL) entre des routeurs de marques différentes.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un tunnel VPN robuste repose sur une rigueur mathématique dans le choix des clés et des protocoles d'échange.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une spécification technique détaillée des paramètres cryptographiques avant l'implémentation.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2202.jpg" alt="VPN IPsec" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[État IPsec SA & Capture Wireshark]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC22.03 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-diagram-3"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC22.03 // Interconnexion Multi-sites</span>
+              <h4>Mettre en place une connexion multi-sites via un réseau opérateur</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Simulation et configuration de liaisons inter-sites à travers une architecture opérateur (technologies VLAN de niveau 2, MPLS et liaisons dédiées).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour relier des agences géographiquement distantes au siège social en garantissant des niveaux de service (QoS) adaptés.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Configuration de sous-interfaces de routage et application de politiques de marquage des paquets sur les équipements de périphérie WAN.</li>
+                    <li><strong>Mes difficultés :</strong> Valider le comportement du routage dynamique à travers la topologie de transport de l'opérateur simulé.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'interconnexion multi-sites nécessite une coordination stricte entre les plans d'adressage internes et les services loués.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Simuler des scénarios de coupure de lien principal pour tester le basculement automatique sur la liaison de secours.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2203.jpg" alt="Multi-sites" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie WAN Multi-sites GNS3]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC22.04 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-telephone"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC22.04 // Téléphonie IP Avancée & ToIP</span>
+              <h4>Déployer des serveurs de ToIP et gérer les flux convergents</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Installation et configuration d'un IPBX (Asterisk / serveur SIP), enregistrement de postes téléphoniques IP et mise en place de files d'attente et règles de numérotation.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour maîtriser le déploiement de la voix sur IP et la convergence des flux multimédias sur une infrastructure IP unifiée.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des fichiers de conf SIP (`sip.conf`, `extensions.conf`), gestion des codecs audio et priorisation des paquets voix (QoS / DiffServ).</li>
+                    <li><strong>Mes difficultés :</strong> Résoudre les problèmes de NAT et de rebond audio (one-way audio) lors des appels traversant des pare-feux.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La ToIP est extrêmement sensible aux délais et à la gigue ; la mise en place d'une politique de QoS rigoureuse est non négociable.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Documenter précisément les plans de numérotation et tester systématiquement les codecs pris en charge.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2204.jpg" alt="ToIP Asterisk" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Console Asterisk / Enregistrement SIP]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC22.05 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bi bi-file-earmark-text"></i></div>
+            <div class="timeline-content">
+              <span class="year-range">AC22.05 // Cahier des Charges & Analyse R&T</span>
+              <h4>Capacité à questionner un cahier des charges R&T et dimensionner une solution</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Analyse critique d'un cahier des charges client pour un projet d'infrastructure, estimation des besoins en bande passante et choix argumenté des équipements de raccordement.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour apprendre à traduire un besoin métier exprimé par un client en spécifications techniques réalisables et budgétisées.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Rédaction de dossiers d'architecture technique (DAT), chiffrage prévisionnel et confrontation des contraintes budgétaires aux exigences de performance.</li>
+                    <li><strong>Mes difficultés :</strong> Anticiper la croissance future du trafic pour éviter le sous-dimensionnement des liens WAN proposés.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un bon ingénieur réseau doit savoir écouter le client, décoder les zones d'ombre d'un cahier des charges et proposer une solution évolutive.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Intégrer des clauses de réversibilité et de tolérance de charge explicites dès la phase de rédaction.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2205.jpg" alt="Cahier des charges" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC22.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Dossier d'Architecture Technique]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CONTENU NIVEAU 1 (BUT 1 - S1/S2 - CONSERVÉ INTÉGRALEMENT)
+      ======================================================== -->
+      <div id="level-1" class="container level-tab-content">
         <div class="timeline-track">
 
           <div class="timeline-item">
@@ -56,10 +225,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1201.jpg" alt="Analyse signal" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.01'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Capture Écran Courbe Oscilloscope]</span>
+                    <img src="assets/img/trace-ac1201.jpg" alt="Analyse signal" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC12.01'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Écran Courbe Oscilloscope]</span>
                   </div>
                 </div>
               </div>
@@ -83,10 +252,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1202.jpg" alt="Système transmission" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.02'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Schéma Chaîne de Transmission / Graphique]</span>
+                    <img src="assets/img/trace-ac1202.jpg" alt="Système transmission" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC12.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Schéma Chaîne de Transmission / Graphique]</span>
                   </div>
                 </div>
               </div>
@@ -110,10 +279,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1203.jpg" alt="Déploiement câblage" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.03'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Photo Câble Serti / Baie de Brassage]</span>
+                    <img src="assets/img/trace-ac1203.jpg" alt="Déploiement câblage" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC12.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Photo Câble Serti / Baie de Brassage]</span>
                   </div>
                 </div>
               </div>
@@ -137,10 +306,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1204.jpg" alt="ToIP Connect" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.04'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Topologie VoIP / Capture Téléphone IP]</span>
+                    <img src="assets/img/trace-ac1204.jpg" alt="ToIP Connect" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC12.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie VoIP / Capture Téléphone IP]</span>
                   </div>
                 </div>
               </div>
@@ -164,10 +333,10 @@
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac1205.jpg" alt="Communication" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/111115/e50914?text=IMAGE+AC12.05'">
-                    <span style="display: block; font-size: 10px; color: var(--red-neon); margin-top: 8px; font-family: var(--font-code);">[Extrait Support Visuel / Mail Formel]</span>
+                    <img src="assets/img/trace-ac1205.jpg" alt="Communication" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=IMAGE+AC12.05'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Extrait Support Visuel / Mail Formel]</span>
                   </div>
                 </div>
               </div>
@@ -176,15 +345,27 @@
 
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="footer text-center">
     <div class="container">
-      <span class="sitename">Eliott.Sys</span>
-      <p style="margin-top: 10px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO S2 BC2 // IUT DE BÉTHUNE</p>
+      <span class="sitename">Eliott<span>.net</span></span>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO BC2 // IUT DE BÉTHUNE</p>
     </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function switchLevel(tabId, btn) {
+      document.querySelectorAll('.level-tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
