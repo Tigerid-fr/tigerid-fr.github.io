@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Administrer les réseaux et l'Internet — Eliott.Sys</title>
+  <title>Compétence Administrer — Eliott Panier</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -41,20 +41,20 @@
     <section class="section">
       <div class="container section-title">
         <span class="subtitle">Bloc de Compétences 1</span>
-        <h2>Administrer les réseaux et l’Internet</h2>
+        <h2>Administrer les réseaux et l'Internet</h2>
         <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et analytique sur la gestion des infrastructures, des systèmes d'exploitation, le routage dynamique et les services réseaux avancés.</p>
       </div>
 
       <!-- Sélecteur de Niveau -->
       <div class="container">
         <div class="level-switcher">
-          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - S3/S4)</button>
-          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - S1/S2)</button>
+          <button class="level-btn active" onclick="switchLevel('level-2', this)">Niveau 2 (BUT 2 - Administrer un réseau)</button>
+          <button class="level-btn" onclick="switchLevel('level-1', this)">Niveau 1 (BUT 1 - Assister l'administrateur du réseau)</button>
         </div>
       </div>
 
       <!-- ========================================================
-           CONTENU NIVEAU 2 (BUT 2 - PROGRAMME OFFICIEL R&T)
+           CONTENU NIVEAU 2 (BUT 2 - 6 AC OFFICIELS)
       ======================================================== -->
       <div id="level-2" class="container level-tab-content active">
         <div class="timeline-track">
@@ -63,24 +63,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-router"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.01 // Routage Dynamique & Commutation Avancée</span>
-              <h4>Configurer et dépanner le routage dynamique et la commutation dans un réseau d'entreprise</h4>
+              <span class="year-range">AC21.01 // Niveau 2</span>
+              <h4>Configurer et dépanner le routage dynamique dans un réseau</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Déploiement et dépannage du protocole OSPF multi-aires, configuration de liaisons agrégées EtherChannel (LACP) et mise en place de mécanismes de sécurité Spanning-Tree (BPDU Guard, Root Guard).</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour interconnecter des sites de manière redondante et assurer une convergence rapide et sécurisée du plan de contrôle.</li>
-                    <li><strong>Comment je l'ai fait :</strong> En utilisant GNS3 et des commutateurs/routeurs virtuels Cisco, en analysant les LSDB (Link State Database) et en inspectant les états des adjacences OSPF.</li>
-                    <li><strong>Mes difficultés :</strong> Ajuster la propagation des routes résumé (summarization) entre les aires OSPF sans créer de trous de routage.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Le routage dynamique exige une rigueur extrême dans la structuration des aires et la gestion des métriques.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Valider systématiquement l'intégrité de la topologie logique par des tests de non-régression avant d'activer le filtrage de routes.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Déploiement et dépannage du protocole de routage dynamique OSPF (mono et multi-aires), configuration d'interfaces passives et gestion de l'agrégation de liaisons avec EtherChannel (LACP).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour assurer la redondance et la convergence automatique des routes en cas de panne de lien physique dans une topologie d'entreprise.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Configuration en CLI Cisco sous Packet Tracer et GNS3, vérification des états d'adjacence via <code>show ip ospf neighbor</code> et inspection de la table de routage.</li>
+                    <li><strong>Mes difficultés :</strong> Diagnostiquer une absence d'adjacence causée par un décalage de masques de sous-réseau et de timers Hello/Dead sur un lien point-à-point.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le routage dynamique requiert une cohérence absolue des paramètres d'interface pour converger sans instabilité.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Définir explicitement les Router-ID à l'aide d'adresses Loopback stables dès le départ de la configuration.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2101.jpg" alt="Topologie OSPF" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.01'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie GNS3 & Table OSPF]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Capture Voisinage OSPF & Table de Routage]</span>
                   </div>
                 </div>
               </div>
@@ -91,24 +91,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-shield-lock"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.02 // Redondance & Sécurité Périmétrique</span>
-              <h4>Configurer une politique de QoS et les fonctions de base de la sécurité d'un réseau</h4>
+              <span class="year-range">AC21.02 // Niveau 2</span>
+              <h4>Configurer et expliquer une politique simple de QoS et les fonctions de base de la sécurité d'un réseau</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Mise en œuvre de protocoles de redondance de passerelle (HSRP/VRRP), application d'ACLs étendues et durcissement des accès aux équipements d'infrastructure.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour garantir la haute disponibilité des accès passerelle et filtrer rigoureusement les flux inter-VLANs sensibles.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Configuration des priorités de préemption HSRP, application des listes de contrôle d'accès sur interfaces SVI et vérification du trafic par captures.</li>
-                    <li><strong>Mes difficultés :</strong> Placer correctement les ACLs (au plus près de la source) pour optimiser le traitement sans bloquer l'administration légitime.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La redondance de passerelle combinée au filtrage fin des flux constitue la première muraille de défense du réseau local.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une matrice de flux claire et partagée avant d'appliquer les règles d'accès sur le matériel.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Implémentation du protocole de redondance de passerelle HSRP avec tracking d'interface, mise en place d'ACLs étendues pour filtrer le trafic inter-VLAN et sécurisation des ports d'accès (Port-Security).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour éviter toute rupture de service pour les postes clients lors de la défaillance d'un routeur et cloisonner les accès conformément à la politique de sécurité.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Paramétrage des priorités HSRP et du mode préemption, écriture de listes d'accès nommées et application en entrée des interfaces virtuelles de commutation (SVI).</li>
+                    <li><strong>Mes difficultés :</strong> Positionner judicieusement les ACLs au plus près de la source sans bloquer involontairement les flux d'administration légitimes (SSH/SNMP).</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La haute disponibilité réseau n'est efficace que si le basculement logique s'accompagne d'un contrôle strict des flux autorisés.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une matrice de flux formelle avant de coder les règles de filtrage sur les équipements.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2102.jpg" alt="HSRP et ACL" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.02'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Statut HSRP & Application ACL]</span>
+                    <img src="assets/img/trace-ac2102.jpg" alt="HSRP et Sécurité" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.02'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Statut HSRP & Application ACL Éclose]</span>
                   </div>
                 </div>
               </div>
@@ -119,24 +119,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-boxes"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.03 // Virtualisation & Postes Clients</span>
-              <h4>Déployer des postes clients et des solutions de virtualisation adaptées à une situation donnée</h4>
+              <span class="year-range">AC21.03 // Niveau 2</span>
+              <h4>Déployer des postes clients et des solutions virtualisées adaptées à une situation donnée</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Déploiement d'environnements virtualisés sous VMware ESXi et VirtualBox, configuration de réseaux virtuels isolés (vSwitch) et conteneurisation de services avec Docker.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour optimiser l'utilisation du matériel physique et cloisonner des applications hétérogènes dans des environnements reproductibles.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Allocation fine des ressources vCPU/RAM, création de ponts réseaux virtuels et rédaction de fichiers de configuration pour conteneurs.</li>
-                    <li><strong>Mes difficultés :</strong> Gérer l'accès aux services conteneurisés depuis l'extérieur de l'hôte via les règles de port mapping.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La virtualisation et les conteneurs offrent une souplesse indispensable pour le prototypage rapide d'architectures réseau complexes.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Automatiser le déploiement des machines virtuelles à l'aide de scripts de configuration initiaux (cloud-init / bash).</li>
+                    <li><strong>Ce que j'ai fait :</strong> Déploiement et gestion de machines virtuelles sur VMware ESXi et VirtualBox, configuration de commutateurs virtuels (vSwitch) et isolation de micro-services avec des conteneurs Docker.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour optimiser les ressources matérielles, cloisonner les environnements d'exécution et garantir un déploiement rapide et reproductible.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Définition des quotas vCPU/RAM, création de ponts réseaux isolés et écriture de fichiers <code>docker-compose.yml</code> multi-conteneurs.</li>
+                    <li><strong>Mes difficultés :</strong> Paramétrer le routage virtuel et les redirections de ports entre l'hôte physique et les conteneurs placés sur des bridges personnalisés.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La conteneurisation apporte une agilité supérieure à la virtualisation lourde pour les architectures orientées services.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Automatiser l'installation des systèmes invités via des images personnalisées et des scripts de configuration non interactifs.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2103.jpg" alt="Virtualisation" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.03'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Console vSwitch / Conteneurs Actifs]</span>
+                    <img src="assets/img/trace-ac2103.jpg" alt="Virtualisation Docker" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.03'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie vSwitch ESXi & Conteneurs Docker]</span>
                   </div>
                 </div>
               </div>
@@ -147,24 +147,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-hdd-stack"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.04 // Services Réseaux Avancés</span>
-              <h4>Déployer des services réseaux avancés (DNS Bind9, Web Apache, Messagerie Postfix)</h4>
+              <span class="year-range">AC21.04 // Niveau 2</span>
+              <h4>Déployer des services réseaux avancés</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Installation et configuration de serveurs DNS (Bind9 avec zones directes/inverses), de serveurs Web (Apache VirtualHosts) et de services de messagerie (Postfix/Dovecot) sur Linux.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour administrer les services fondamentaux assurant l'autonomie et la communication d'un réseau d'entreprise.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Édition des fichiers de configuration sous `/etc/`, utilisation de l'outil `dig` pour vérifier la résolution et inspection des logs système.</li>
-                    <li><strong>Mes difficultés :</strong> Résoudre les erreurs de syntaxe dans les fichiers de zones DNS et synchroniser les enregistrements MX/PTR.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La moindre erreur de syntaxe dans un fichier de service Linux peut invalider toute une chaîne applicative.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Valider systématiquement la configuration avec les outils natifs de test (`named-checkzone`, `apache2ctl configtest`) avant tout redémarrage.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Installation et configuration complète d'un serveur DNS faisant autorité (Bind9), d'un serveur Web Apache avec plusieurs VirtualHosts et de services de messagerie (Postfix/Dovecot).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour mettre en place les services centraux indispensables à la communication et à la résolution de noms au sein d'un domaine d'entreprise.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Rédaction des fichiers de zones directes et inverses sous Debian/Ubuntu, configuration des hôtes virtuels dans <code>/etc/apache2/sites-available/</code> et validation par <code>dig</code> et <code>nslookup</code>.</li>
+                    <li><strong>Mes difficultés :</strong> Gérer la cohérence entre les enregistrements PTR de résolution inverse et les champs MX lors des tests d'acheminement de courrier.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Les services réseaux fonctionnent en dépendance étroite ; un dysfonctionnement DNS bloque l'ensemble des services applicatifs associés.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Tester les fichiers de zone avec <code>named-checkzone</code> avant d'appliquer tout redémarrage du démon Bind9.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2104.jpg" alt="Bind9 Apache" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.04'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Fichiers de Zone Bind9 & Test Dig]</span>
+                    <img src="assets/img/trace-ac2104.jpg" alt="Services Bind9 Apache" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.04'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Fichiers de Zones Bind9 & Requête Dig Valide]</span>
                   </div>
                 </div>
               </div>
@@ -175,24 +175,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-globe"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.05 // Réseaux Opérateurs & Internet</span>
+              <span class="year-range">AC21.05 // Niveau 2</span>
               <h4>Identifier les réseaux opérateurs et l'architecture d'Internet</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Étude des modèles d'interconnexion BGP, modélisation de Systèmes Autonomes (AS) et analyse des technologies de transport WAN.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour comprendre le fonctionnement du routage inter-domaines et la structure globale des réseaux de télécommunications mondiaux.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Mise en place de sessions eBGP sous simulateur, analyse des tables de routage mondiales et observation des attributs d'acheminement.</li>
-                    <li><strong>Mes difficultés :</strong> Maîtriser l'impact des attributs BGP (comme l'AS-Path ou la Local Preference) sur la sélection du meilleur chemin.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Internet repose sur des accords de peering et de transit régis par des politiques de routage rigoureuses entre opérateurs.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Cartographier graphiquement les politiques d'exportation de routes avant de configurer les routeurs de bordure.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Étude des principes de routage inter-domaines avec BGP, modélisation de Systèmes Autonomes (AS) et analyse des topologies de raccordement opérateur (Transit, Peering, MPLS).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour comprendre comment les réseaux d'entreprises privées s'interconnectent et échangent des tables de routage à l'échelle mondiale.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Configuration de sessions eBGP sous simulateur, manipulation des attributs de chemin (AS-Path, Next-Hop) et traçage via des outils Looking Glass.</li>
+                    <li><strong>Mes difficultés :</strong> Intégrer la logique des attributs BGP et leur ordre de priorité dans le choix de la meilleure route vers une destination externe.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'architecture d'Internet repose sur un équilibre contractuel et technique strict entre opérateurs géré par les politiques de filtrage BGP.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Poser systématiquement un schéma logique des échanges de préfixes avant de configurer les sessions de voisinage.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
                     <img src="assets/img/trace-ac2105.jpg" alt="BGP Opérateur" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.05'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Table BGP & Topologie Multi-AS]</span>
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Topologie Multi-AS & Session eBGP Établie]</span>
                   </div>
                 </div>
               </div>
@@ -203,24 +203,24 @@
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-people-fill"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC21.06 // Travail Collaboratif & Professionnalisation</span>
+              <span class="year-range">AC21.06 // Niveau 2</span>
               <h4>Travailler en équipe pour développer ses compétences professionnelles</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Répartition des rôles et collaboration active lors des projets d'infrastructure du S3, centralisation du code et des configurations sur GitLab.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour reproduire les conditions d'un centre d'opérations réseau (NOC) où la collaboration synchronisée est vitale.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Utilisation d'outils de suivi de version (Git), revues de code et réunions de coordination régulières en équipe.</li>
-                    <li><strong>Mes difficultés :</strong> Harmoniser les méthodes de configuration entre les différents membres du groupe sur un même projet.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La communication claire et la documentation partagée évitent la redondance et les conflits de configuration.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Établir une convention de nommage et une charte de configuration commune dès le premier jour de projet.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Réalisation de projets d'infrastructure d'envergure en équipe lors des SAÉ du semestre 3, répartition des responsabilités techniques et centralisation des livrables via GitLab.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes de collaboration propres aux équipes d'exploitation réseau et respecter les jalons d'un projet complexe.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Gestion d'un tableau Kanban partagé, revues croisées des configurations réseau et réunions de cadrage au début de chaque séance.</li>
+                    <li><strong>Mes difficultés :</strong> Assurer la compatibilité entre l'adressage IP défini par un membre de l'équipe et les services configurés par un autre sans rupture de planning.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La documentation partagée et la concertation préalable sont aussi importantes que la réalisation technique pour la réussite d'un projet collectif.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un Document d'Architecture Technique (DAT) initial pour acter définitivement les interfaces et les conventions.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
                   <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2106.jpg" alt="Travail d'équipe" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.06'">
-                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Historique Commits Git & Kanban]</span>
+                    <img src="assets/img/trace-ac2106.jpg" alt="Travail en équipe" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC21.06'">
+                    <span style="display: block; font-size: 10px; color: #a78bfa; margin-top: 8px; font-family: var(--font-code);">[Suivi Kanban & Historique des Commits Git]</span>
                   </div>
                 </div>
               </div>
@@ -231,16 +231,17 @@
       </div>
 
       <!-- ========================================================
-           CONTENU NIVEAU 1 (BUT 1 - S1/S2 - CONSERVÉ INTÉGRALEMENT)
+           CONTENU NIVEAU 1 (BUT 1 - 6 AC OFFICIELS CONSERVÉS)
       ======================================================== -->
       <div id="level-1" class="container level-tab-content">
         <div class="timeline-track">
 
+          <!-- AC11.01 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-lightning-charge"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.01 // Électronique Fondamentale</span>
-              <h4>Maîtriser les lois fondamentales de l’électricité</h4>
+              <span class="year-range">AC11.01 // Niveau 1</span>
+              <h4>Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
@@ -263,11 +264,12 @@
             </div>
           </div>
 
+          <!-- AC11.02 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-diagram-3"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.02 // Architecture des Systèmes</span>
-              <h4>Comprendre l'architecture et les fondements des systèmes numériques</h4>
+              <span class="year-range">AC11.02 // Niveau 1</span>
+              <h4>Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
@@ -290,10 +292,11 @@
             </div>
           </div>
 
+          <!-- AC11.03 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-gear-fill"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.03 // Initiation Réseau</span>
+              <span class="year-range">AC11.03 // Niveau 1</span>
               <h4>Configurer les fonctions de base du réseau local</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
@@ -317,11 +320,12 @@
             </div>
           </div>
 
+          <!-- AC11.04 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-terminal"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.04 // Environnements OS</span>
-              <h4>Maîtriser les rôles et les principes fondamentaux des OS</h4>
+              <span class="year-range">AC11.04 // Niveau 1</span>
+              <h4>Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
@@ -344,17 +348,18 @@
             </div>
           </div>
 
+          <!-- AC11.05 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-exclamation-triangle"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.05 // Diagnostic Réseau</span>
+              <span class="year-range">AC11.05 // Niveau 1</span>
               <h4>Identifier les dysfonctionnements du réseau local et savoir les signaler</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
                     <li><strong>Ce que j'ai fait :</strong> J'ai analysé des pannes réseau simulées, tracé des coupures de liens et rédigé des rapports d'incidents clairs.</li>
                     <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes méthodologiques d'un technicien support capable d'isoler un problème sur la couche physique ou logique.</li>
-                    <li><strong>Comment je l'ai fait :</strong> En utilisant les outils de diagnostic ICMP classiques (`ping`, `traceroute`, `nslookup`) et en inspectant les logs d'erreurs en TP.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En utilisant les outils de diagnostic ICMP classiques (<code>ping</code>, <code>traceroute</code>, <code>nslookup</code>) et en inspectant les logs d'erreurs en TP.</li>
                     <li><strong>Mes difficultés :</strong> Distinguer rapidement si l'origine d'un problème de résolution de nom venait d'un mauvais adressage client ou d'une panne du serveur DNS local.</li>
                     <li><strong>Ce que j'en ai appris :</strong> Qu'un bon diagnostic doit suivre scrupuleusement l'ordre des couches du modèle OSI (du physique vers l'application) pour faire gagner du temps à l'équipe.</li>
                     <li><strong>Ce que je ferais autrement :</strong> Structurer mes rapports d'anomalies de manière plus standardisée en utilisant des fiches d'incidents types.</li>
@@ -371,10 +376,11 @@
             </div>
           </div>
 
+          <!-- AC11.06 -->
           <div class="timeline-item">
             <div class="timeline-marker"><i class="bi bi-laptop"></i></div>
             <div class="timeline-content">
-              <span class="year-range">AC11.06 // Poste Client</span>
+              <span class="year-range">AC11.06 // Niveau 1</span>
               <h4>Installer un poste client, expliquer la procédure mise en place</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
@@ -407,7 +413,7 @@
   <footer class="footer text-center">
     <div class="container">
       <span class="sitename">Eliott<span>.net</span></span>
-      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO BC1 // IUT DE BÉTHUNE</p>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO BC1</p>
     </div>
   </footer>
 
