@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Surveiller les réseaux et incidents — Eliott.Sys</title>
+  <title>Compétence Surveiller — Eliott Panier</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .trace-box { background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed rgba(6, 182, 212, 0.35); }
+  </style>
 </head>
 <body>
 
@@ -16,7 +19,7 @@
   <header id="header" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <i class="bi bi-hdd-network tech-logo-icon" style="color: #06b6d4; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);"></i>
         <h1>Eliott<span>.net</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
@@ -32,64 +35,64 @@
   <main class="main" style="padding-top: 100px;">
     <section class="section">
       <div class="container section-title">
-        <span class="subtitle" style="color: #22d3ee; background: rgba(6,182,212,0.12); border-color: rgba(6,182,212,0.3);">Parcours Cybersécurité — Niveau 2</span>
+        <span class="subtitle" style="color: #22d3ee; background: rgba(6,182,212,0.12); border-color: rgba(6,182,212,0.3);">Parcours Cybersécurité — BUT 2</span>
         <h2>Surveiller un système d'information</h2>
-        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et opérationnelle sur l'analyse de trafic, la supervision des journaux d'événements (logs), la détection d'intrusions et la réponse aux incidents.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Niveau 1 : Prendre en main les outils de surveillance et de test du système d'information.</p>
       </div>
 
       <div class="container">
-        <div class="timeline-track">
+        <div class="timeline-track" style="border-left-color: rgba(6,182,212,0.3);">
 
-          <!-- AC25.01 -->
+          <!-- AC25.01Cyber -->
           <div class="timeline-item">
-            <div class="timeline-marker" style="color: #06b6d4; border-color: rgba(6,182,212,0.5);"><i class="bi bi-activity"></i></div>
+            <div class="timeline-marker" style="color: #06b6d4; border-color: rgba(6,182,212,0.5);"><i class="bi bi-shield-shaded"></i></div>
             <div class="timeline-content">
-              <span class="year-range" style="color: #22d3ee; background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.3);">AC25.01 // Analyse de Trafic & Supervision des Logs</span>
-              <h4>Surveiller les flux et analyser les journaux d'événements pour détecter des anomalies</h4>
+              <span class="year-range" style="color: #22d3ee; background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.3);">AC25.01Cyber</span>
+              <h4>Administrer les protections contre les logiciels malveillants</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Analyse forensique de captures de trafic réseau sous Wireshark, centralisation et examen de fichiers de journaux système (<code>/var/log/auth.log</code>, <code>syslog</code>) et identification de signatures d'attaques.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour repérer de manière précoce les comportements suspects, les tentatives de force brute et les anomalies de trafic sur le réseau.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Application de filtres d'analyse de paquets avancés, corrélation d'événements temporels dans les logs et utilisation d'outils de supervision.</li>
-                    <li><strong>Mes difficultés :</strong> Disserner le bruit de fond légitime du réseau d'une véritable signature d'intrusion ciblée.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Une surveillance efficace repose sur la centralisation rigoureuse des logs et la réactivité face aux indicateurs de compromission (IoC).</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Automatiser l'analyse des logs par des scripts d'alerte en temps réel dès l'apparition d'erreurs d'authentification répétées.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Déploiement et administration d'outils de protection antivirale et antimalware (ClamAV sous Linux, Windows Defender avec stratégies de groupe GPO), configuration des analyses planifiées et gestion des alertes de quarantaine.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour prémunir les postes clients et serveurs contre l'exécution de charges utiles malveillantes (trojans, ransomwares, spywares) et maintenir une base virale constamment actualisée.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Automatisation des mises à jour des bases de signatures (via freshclam / cron), exclusion de faux positifs sur des répertoires applicatifs et paramétrage de scans hebdomadaires avec rapports par courriel.</li>
+                    <li><strong>Mes difficultés :</strong> Ajuster la sensibilité des analyses en temps réel pour ne pas saturer l'utilisation CPU/disque des machines lors des horaires de forte activité.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Un antivirus seul ne suffit pas : son efficacité dépend de la fraîcheur absolue de ses bases de signatures et d'un couplage avec des mécanismes de détection comportementale (EDR).</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Centraliser la remontée des alertes de quarantaine vers un serveur de logs unique (SIEM / Syslog) plutôt que de consulter les rapports machine par machine.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2501.jpg" alt="Analyse Wireshark" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/06b6d4?text=TRACE+AC25.01'">
-                    <span style="display: block; font-size: 10px; color: #22d3ee; margin-top: 8px; font-family: var(--font-code);">[Capture Wireshark / Analyse d'Anomalie]</span>
+                    <img src="assets/img/trace-ac2501.jpg" alt="Antimalware ClamAV" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/06b6d4?text=TRACE+AC25.01Cyber'">
+                    <span style="display: block; font-size: 10px; color: #22d3ee; margin-top: 8px; font-family: var(--font-code);">[Rapport Scan ClamAV & Quarantaine]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- AC25.02 -->
+          <!-- AC25.02Cyber -->
           <div class="timeline-item">
-            <div class="timeline-marker" style="color: #06b6d4; border-color: rgba(6,182,212,0.5);"><i class="bi bi-shield-exclamation"></i></div>
+            <div class="timeline-marker" style="color: #06b6d4; border-color: rgba(6,182,212,0.5);"><i class="bi bi-search"></i></div>
             <div class="timeline-content">
-              <span class="year-range" style="color: #22d3ee; background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.3);">AC25.02 // Réponse à Incident & Remédiation</span>
-              <h4>Participer à la gestion d'un incident de sécurité et à la communication de crise</h4>
+              <span class="year-range" style="color: #22d3ee; background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.3);">AC25.02Cyber</span>
+              <h4>Prendre en main des outils de test de pénétration réseau/système</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Simulation de réponse à incident (isolation d'une machine compromise, analyse des vecteurs d'attaque) et rédaction de rapports d'incident et de notes de communication opérationnelle.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes méthodologiques d'un analyste SOC (Security Operations Center) en cas de crise avérée.</li>
-                    <li><strong>Comment je l'ai fait :</strong> En suivant les étapes de confinement, d'éradication et de retour d'expérience (Post-Mortem) préconisées par les bonnes pratiques de cybersécurité.</li>
-                    <li><strong>Mes difficultés :</strong> Maintenir un calme absolu et documenter chronologiquement chaque action sous la pression du scénario d'attaque.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> La rapidité de confinement d'un hôte infecté limite l'impact global de l'attaque sur l'ensemble du système d'information.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Préparer des playbooks de réponse standardisés pour accélérer les prises de décision en situation critique.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Utilisation d'outils d'audit offensif et de reconnaissance en environnement isolé (Nmap pour la cartographie des hôtes et la détection de services/versions, Wireshark pour l'analyse des paquets, et scanners de vulnérabilités web).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour identifier de manière proactive les ports ouverts, les bannières de services non masquées et les versions logicielles obsolètes avant qu'un attaquant ne les exploite.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Exécution de scans Nmap ciblés (options -sS, -sV, -sC), analyse des traces réseau générées lors des sondes et corrélation des versions détectées avec les bases de vulnérabilités publiques (CVE).</li>
+                    <li><strong>Mes difficultés :</strong> Interpréter correctement les états de ports filtrés et distinguer une véritable vulnérabilité exploitable d'un simple faux positif généré par le scanner.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le test d'intrusion exige une méthodologie rigoureuse, un cadre légal d'autorisation strict et une restitution claire pour guider les équipes défensives dans la remédiation.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger un rapport de vulnérabilités standardisé (avec score CVSS) dès la fin des scans pour prioriser les correctifs à déployer.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2502.jpg" alt="Réponse à incident" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/06b6d4?text=TRACE+AC25.02'">
-                    <span style="display: block; font-size: 10px; color: #22d3ee; margin-top: 8px; font-family: var(--font-code);">[Fiche de Rapport d'Incident & Procédure]</span>
+                    <img src="assets/img/trace-ac2502.jpg" alt="Pentest Nmap Wireshark" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/06b6d4?text=TRACE+AC25.02Cyber'">
+                    <span style="display: block; font-size: 10px; color: #22d3ee; margin-top: 8px; font-family: var(--font-code);">[Résultat Scan Nmap & Cartographie Services]</span>
                   </div>
                 </div>
               </div>
@@ -98,13 +101,14 @@
 
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="footer text-center">
     <div class="container">
       <span class="sitename">Eliott<span>.net</span></span>
-      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO CYBER SURVEILLER</p>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO CYBER SURVEILLER // IUT DE BÉTHUNE</p>
     </div>
   </footer>
 
