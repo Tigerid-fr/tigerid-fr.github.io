@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Sécuriser les systèmes et réseaux — Eliott.Sys</title>
+  <title>Compétence Sécuriser — Eliott Panier</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .trace-box { background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed rgba(16, 185, 129, 0.35); }
+  </style>
 </head>
 <body>
 
@@ -16,7 +19,7 @@
   <header id="header" class="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <i class="bi bi-hdd-network tech-logo-icon"></i>
+        <i class="bi bi-hdd-network tech-logo-icon" style="color: #10b981; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);"></i>
         <h1>Eliott<span>.net</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
@@ -32,64 +35,176 @@
   <main class="main" style="padding-top: 100px;">
     <section class="section">
       <div class="container section-title">
-        <span class="subtitle" style="color: #34d399; background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.3);">Parcours Cybersécurité — Niveau 2</span>
+        <span class="subtitle" style="color: #34d399; background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.3);">Parcours Cybersécurité — BUT 2</span>
         <h2>Sécuriser un système d'information</h2>
-        <p style="max-width: 650px; color: var(--text-body);">Démarche réflexive et opérationnelle sur le durcissement des systèmes, le cloisonnement des réseaux, l'application des recommandations ANSSI et la gestion des accès.</p>
+        <p style="max-width: 650px; color: var(--text-body);">Niveau 1 : Sensibiliser aux vulnérabilités d'un système d'information et aux remédiations possibles.</p>
       </div>
 
       <div class="container">
-        <div class="timeline-track">
+        <div class="timeline-track" style="border-left-color: rgba(16,185,129,0.3);">
 
-          <!-- AC24.01 -->
+          <!-- AC24.01Cyber -->
           <div class="timeline-item">
             <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-shield-check"></i></div>
             <div class="timeline-content">
-              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.01 // Durcissement & Configuration Sécurisée</span>
-              <h4>Appliquer les politiques de sécurité et durcir les systèmes d'exploitation</h4>
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.01Cyber</span>
+              <h4>Connaître et utiliser les bonnes pratiques et les recommandations de cybersécurité</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Application de guides de durcissement (hardening) sur serveurs Linux, désactivation des services superflus, configuration stricte du démon SSH (interdiction root, clés publiques) et filtrage pare-feu UFW/iptables.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour réduire drastiquement la surface d'attaque des serveurs exposés et prévenir toute tentative d'élévation de privilèges.</li>
-                    <li><strong>Comment je l'ai fait :</strong> En suivant les recommandations de l'ANSSI et les CIS Benchmarks, puis en validant l'état des ports par des scans de vulnérabilités locaux (Nmap).</li>
-                    <li><strong>Mes difficultés :</strong> Ne pas bloquer par mégarde les accès d'administration distants lors de la mise en place des règles de filtrage strictes.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Le durcissement d'un système est un équilibre permanent entre niveau de sécurité requis et accessibilité opérationnelle des services.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Valider les scripts de hardening sur des environnements de test isolés avant application en production.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Étude et application des guides d'hygiène informatique de l'ANSSI (politique de mots de passe robustes, principe du moindre privilège, gestion rigoureuse des mises à jour et segmentation des accès).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour acquérir les réflexes fondamentaux de sécurité nécessaires à tout administrateur réseau intervenant sur un système d'information.</li>
+                    <li><strong>Comment je l'ai fait :</strong> En exploitant les recommandations officielles de l'ANSSI, en auditant les configurations par défaut et en appliquant les préconisations sur nos machines de laboratoire.</li>
+                    <li><strong>Mes difficultés :</strong> Trouver l'équilibre entre un niveau de sécurité élevé et les contraintes ergonomiques des utilisateurs finaux.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'application méthodique des règles d'hygiène de base permet de neutraliser la quasi-totalité des attaques automatisées ou opportunistes.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une charte d'utilisation synthétique et vulgarisée pour faciliter l'adoption des bonnes pratiques par les collaborateurs.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2401.jpg" alt="Hardening Linux" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.01'">
-                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Rapport d'Audit UFW & Configuration SSHD]</span>
+                    <img src="assets/img/trace-ac2401.jpg" alt="Guide ANSSI" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.01Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Synthèse Guide Hygiène ANSSI]</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- AC24.02 -->
+          <!-- AC24.02Cyber -->
           <div class="timeline-item">
-            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-lock"></i></div>
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-shield-lock"></i></div>
             <div class="timeline-content">
-              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.02 // Cloisonnement Réseau & Firewalling</span>
-              <h4>Concevoir et mettre en œuvre le cloisonnement d'un réseau sécurisé (DMZ)</h4>
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.02Cyber</span>
+              <h4>Mettre en œuvre les outils fondamentaux de sécurisation d'une infrastructure du réseau</h4>
               <div class="row gy-4 mt-2">
                 <div class="col-lg-8">
                   <ul class="list-unstyled tech-list">
-                    <li><strong>Ce que j'ai fait :</strong> Mise en place d'architectures réseau segmentées avec isolation des zones sensibles, création de DMZ pour les serveurs Web publics et filtrage inter-VLAN par pare-feu applicatif.</li>
-                    <li><strong>Pourquoi je l'ai fait :</strong> Pour confiner une compromission éventuelle et empêcher un attaquant de progresser latéralement au sein du système d'information.</li>
-                    <li><strong>Comment je l'ai fait :</strong> Définition de zones de sécurité (Inside, Outside, DMZ) sur routeurs et pare-feu, application de règles de NAT et vérification par tests de pénétration internes.</li>
-                    <li><strong>Mes difficultés :</strong> Paramétrer correctement les règles de rebond et de NAT pour que les utilisateurs internes accèdent aux services de la DMZ sans faille.</li>
-                    <li><strong>Ce que j'en ai appris :</strong> Le principe de défense en profondeur exige que chaque zone réseau soit strictement isolée et contrôlée.</li>
-                    <li><strong>Ce que je ferais autrement :</strong> Rédiger une matrice de flux détaillée validant l'origine, la destination et les ports autorisés pour chaque service.</li>
+                    <li><strong>Ce que j'ai fait :</strong> Configuration de pare-feu de filtrage (UFW/iptables), mise en place de listes de contrôle d'accès (ACL étendues) et sécurisation des accès commutateurs via Port-Security.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour filtrer le trafic aux frontières du réseau et empêcher les branchements non autorisés sur les prises Ethernet de l'infrastructure.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Écriture de règles de filtrage d'état en CLI, limitation du nombre d'adresses MAC autorisées par port commutateur avec mise en violation (shutdown).</li>
+                    <li><strong>Mes difficultés :</strong> Ordonner logiquement les règles de filtrage pour éviter les masquages de directives par inadvertance.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Le filtrage périmétrique et le verrouillage de la couche d'accès constituent le premier rempart contre les intrusions physiques et logiques.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Valider les règles de filtrage à l'aide de paquets forgés (Scapy / ping ciblé) avant d'enregistrer la configuration de manière persistante.</li>
                   </ul>
                 </div>
                 <div class="col-lg-4 text-center">
-                  <div style="background: rgba(8, 7, 18, 0.7); padding: 15px; border-radius: var(--radius-soft); border: 1px dashed var(--border-light);">
+                  <div class="trace-box">
                     <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
-                    <img src="assets/img/trace-ac2402.jpg" alt="Cloisonnement DMZ" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.02'">
-                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Topologie de Segmentation & Règles Pare-feu]</span>
+                    <img src="assets/img/trace-ac2402.jpg" alt="Port-Security" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.02Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Capture Port-Security & Règles UFW]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC24.03Cyber -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-hdd-network"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.03Cyber</span>
+              <h4>Sécuriser les services</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Durcissement et sécurisation de services d'infrastructure (mise en place de HTTPS avec certificats SSL/TLS sur Apache, restriction des requêtes de récursion DNS sous Bind9, protection SSH).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour chiffrer les flux applicatifs, éliminer les échanges en clair et empêcher l'exploitation de serveurs DNS comme relais d'amplification.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Génération de certificats avec OpenSSL, paramétrage des directives VirtualHosts SSL dans Apache et restriction des autorisations de requêtage dans <code>named.conf.options</code>.</li>
+                    <li><strong>Mes difficultés :</strong> Régler les chaînes de certification et les correspondances de noms de domaine pleinement qualifiés (FQDN) sans erreurs de négociation TLS.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Aucun service réseau ne doit être laissé avec ses options par défaut ; la sécurité doit être intégrée dès la phase d'installation.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Mettre en œuvre une autorité de certification (CA) interne pour distribuer et révoquer facilement les certificats en environnement de test.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2403.jpg" alt="Sécurisation Services" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.03Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Configuration VirtualHost SSL & Bind9 Sécurisé]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC24.04Cyber -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-key"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.04Cyber</span>
+              <h4>Choisir les outils cryptographiques adaptés au besoin fonctionnel du système d'information</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Manipulation d'algorithmes cryptographiques symétriques (AES-256), asymétriques (RSA, ED25519) et de fonctions de hachage (SHA-256) pour sécuriser des transferts et authentifier des données.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour répondre aux exigences fonctionnelles de confidentialité, d'intégrité et de non-répudiation adaptées à chaque type de communication.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Utilisation d'OpenSSL et GPG en ligne de commande pour le chiffrement de fichiers sensibles, la signature d'archives et la vérification des empreintes de contrôle.</li>
+                    <li><strong>Mes difficultés :</strong> Distinguer l'usage respectif de la clé publique et de la clé privée entre le mécanisme de chiffrement et celui de signature numérique.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> La sécurité repose sur la robustesse mathématique des standards éprouvés et la gestion rigoureuse du cycle de vie des clés privées.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Établir une procédure stricte de révocation et d'archivage sécurisé des clés d'administration.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2404.jpg" alt="Cryptographie" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.04Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Commandes OpenSSL & Hachage SHA-256]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC24.05Cyber -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-bug"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.05Cyber</span>
+              <h4>Connaître les différents types d'attaque</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Étude théorique et mise en situation contrôlée des principaux vecteurs d'attaque (DDoS, empoisonnement de cache ARP/DNS, injection SQL, force brute d'identifiants et ransomwares).</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour analyser les failles exploitées par les attaquants et concevoir des mécanismes de défense pertinents pour nos architectures.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Reproduction d'attaques d'ARP Spoofing en réseau isolé sous machine virtuelle, capture des flux altérés sous Wireshark et étude des contre-mesures (Dynamic ARP Inspection).</li>
+                    <li><strong>Mes difficultés :</strong> Analyser la séquence de paquets forgés pour isoler précisément l'instant où la table de commutation a été empoisonnée.</li>
+                    <li><strong>Ce que j'en ai appris :</strong> Comprendre le fonctionnement offensif est le prérequis indispensable pour configurer efficacement les protections défensives.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Rédiger des fiches de synthèse structurées détaillant pour chaque attaque : vecteur, impact, signature et remédiation.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2405.jpg" alt="Types d'attaques" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/10b981?text=TRACE+AC24.05Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Capture Wireshark Attaque ARP Poisoning]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AC24.06Cyber -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="color: #10b981; border-color: rgba(16,185,129,0.5);"><i class="bi bi-translate"></i></div>
+            <div class="timeline-content">
+              <span class="year-range" style="color: #34d399; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3);">AC24.06Cyber</span>
+              <h4>Comprendre des documents techniques en anglais</h4>
+              <div class="row gy-4 mt-2">
+                <div class="col-lg-8">
+                  <ul class="list-unstyled tech-list">
+                    <li><strong>Ce que j'ai fait :</strong> Lecture, analyse et exploitation quotidienne de bulletins de sécurité CVE/NIST, de documentations officielles en anglais (RFCs protocolaires, documentations Cisco, Apache, Docker) et de consignes de remédiation.</li>
+                    <li><strong>Pourquoi je l'ai fait :</strong> Pour accéder directement aux sources d'information internationales de référence et traiter les failles de sécurité dès leur divulgation.</li>
+                    <li><strong>Comment je l'ai fait :</strong> Traduction technique, extraction des indicateurs de compromission (IoC) et rédaction de synthèses exploitables en langue française pour les TP et projets.</li>
+                    <li><strong>Mes difficultés :</strong> Assimiler le jargon technique anglo-saxon très pointu lié aux primitives cryptographiques et aux failles mémoire (buffer overflow).</li>
+                    <li><strong>Ce que j'en ai appris :</strong> L'anglais technique est la langue de travail incontournable en cybersécurité pour maintenir une veille réactive et efficace.</li>
+                    <li><strong>Ce que je ferais autrement :</strong> Tenir un glossaire bilingue personnel des termes de cybersécurité rencontrés lors des veilles techniques.</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="trace-box">
+                    <h5 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Trace Pertinente</h5>
+                    <img src="assets/img/trace-ac2406.jpg" alt="Documentation Anglais" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/300x180/0d0c1d/8b5cf6?text=TRACE+AC24.06Cyber'">
+                    <span style="display: block; font-size: 10px; color: #34d399; margin-top: 8px; font-family: var(--font-code);">[Extrait Bulletin CVE / RFC en Anglais]</span>
                   </div>
                 </div>
               </div>
@@ -98,13 +213,14 @@
 
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="footer text-center">
     <div class="container">
       <span class="sitename">Eliott<span>.net</span></span>
-      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO CYBER SÉCURISER</p>
+      <p style="margin-top: 8px; font-family: var(--font-code); font-size: 12px; color: var(--text-muted);">STATUS: SECURE // PORTFOLIO CYBER SÉCURISER // IUT DE BÉTHUNE</p>
     </div>
   </footer>
 
